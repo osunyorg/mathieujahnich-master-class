@@ -1,15 +1,10 @@
 ---
-name: >
-  Master Class
-address: >
+name: "Master Class"
+address: >-
   31 rue Auguste Barbier
-zipcode: >
-  77300
-city: >
-  Fontainebleau
-country: >
-  France
-phone: >
-  
+zipcode: "77300"
+city: "Fontainebleau"
+country: "France"
+phone: ""
 roles: []
 ---
