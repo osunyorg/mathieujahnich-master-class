@@ -11,7 +11,7 @@ fr:
   permalinks:
     events: /agenda/:year-:month-:day-:slug/
     events_categories: /agenda/:slug/
-    programs: /formations/:slug/
+    programs: /programme/:slug/
     publications: /publications/:year-:slug/
     persons: /equipe/:slug/
     researchers: /equipe/:slug/publications/
