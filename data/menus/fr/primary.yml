@@ -13,4 +13,8 @@ items:
   target: "/a-propos/"
   kind: page
   children: []
+- title: Avis
+  target: "/avis/"
+  kind: page
+  children: []
 
