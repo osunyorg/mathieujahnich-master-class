@@ -5,4 +5,8 @@ items:
   target: "/programme/"
   kind: page
   children: []
+- title: Intervenant·es
+  target: "/intervenantes/"
+  kind: page
+  children: []
 
