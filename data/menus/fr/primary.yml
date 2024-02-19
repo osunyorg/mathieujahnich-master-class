@@ -2,7 +2,7 @@
 title: Menu principal
 items:
 - title: Programme
-  target: "/formations/"
+  target: "/programme/"
   kind: page
   children: []
 
