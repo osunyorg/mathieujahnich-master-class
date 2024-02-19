@@ -21,7 +21,7 @@ items:
   target: "/diplomes/"
   kind: page
   children: []
-- title: Formations
+- title: Programme
   target: "/formations/"
   kind: page
   children: []
