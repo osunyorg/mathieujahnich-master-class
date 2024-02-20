@@ -9,10 +9,6 @@ items:
   target: "/a-propos/"
   kind: page
   children: []
-- title: Intervenant·es
-  target: "/intervenantes/"
-  kind: page
-  children: []
 - title: Avis
   target: "/avis/"
   kind: page
