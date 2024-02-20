@@ -13,9 +13,9 @@ fr:
     events_categories: /agenda/:slug/
     programs: /programme/:slug/
     publications: /publications/:year-:slug/
-    persons: /intervenantes/:slug/
-    researchers: /intervenantes/:slug/publications/
-    teachers: /intervenantes/:slug/programs/
+    persons: /equipe/:slug/
+    researchers: /equipe/:slug/publications/
+    teachers: /equipe/:slug/programs/
   taxonomies:
     administrator: administrators
     author: authors

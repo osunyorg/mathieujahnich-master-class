@@ -22,15 +22,15 @@ translation_key: communication-website-page-32653ffa-f5b4-4743-bcb9-daa74aaaeca6
 bodyclass: 
 
 children:
-  - "persons/_index.html"
-  - "posts/_index.html"
-  - "events/_index.html"
-  - "organizations/_index.html"
-  - "diplomas/_index.html"
   - "programs/_index.html"
-  - "publications/_index.html"
   - "pages/a-propos/_index.html"
+  - "teachers/_index.html"
   - "pages/avis/_index.html"
+  - "diplomas/_index.html"
+  - "publications/_index.html"
+  - "organizations/_index.html"
+  - "events/_index.html"
+  - "posts/_index.html"
 meta_description: >
   
 description: >
@@ -42,14 +42,42 @@ summary: >
 header_text: >-
   Bienvenue sur le site de la Master Class Communication responsable de Mathieu Jahnich
 header_cta:
-  display: true
+  display: false
   label: En savoir plus
-  target: /
+  target: /a-propos
 contents_reading_time:
-  seconds: 16
+  seconds: 18
   text: >-
     moins d'une minute
 contents:
+  - kind: block
+    template: call_to_action
+    title: >-
+      
+    ranks:
+      self: false
+    data:
+      text: >-
+        
+
+
+      alt: >-
+        
+
+      credit: >-
+        
+
+      buttons:
+        - title: >-
+            En savoir plus
+
+          url: >-
+            /a-propos/
+
+          target_blank: false
+
+
+
   - kind: block
     template: programs
     title: >-
@@ -61,14 +89,20 @@ contents:
       programs:
         - path: "/formation-2/"
         - path: "/master-class-communication-responsable-niveau-1/"
+        - path: "/greenwashing-session-equipes-juridiques/"
 
 
+  - kind: heading
+    title: >-
+      Avis de participant·es
+    position: 0
+    rank: 2
   - kind: block
     template: testimonials
     title: >-
       Avis de participant·es
     ranks:
-      self: 2
+      self: 3
     data:
       testimonials:
         - text: >-
@@ -89,6 +123,7 @@ contents:
 
           job: >-
             
+
 
 
 
