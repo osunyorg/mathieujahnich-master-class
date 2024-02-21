@@ -45,3 +45,45 @@ body.full-width .block-call_to_action .call_to_action--without-image > div .acti
 body.full-width .block-call_to_action .block-content 
     padding-top: 0
     padding-bottom: 0
+
+
+
+.block-testimonials
+    @include media-breakpoint-up(desktop)
+        @include in-page-without-sidebar
+            figure
+                margin-bottom: 0
+                padding-right: 0
+
+        figcaption
+            position: relative
+            float: right
+            top: -50%
+        blockquote
+            width: col(9)
+    .splide
+        button
+        &__arrow
+            background: transparent
+            color: $color-text
+            border: 2px dotted $color-text
+            border-radius: 45px
+            width: $spacing3
+            height:  $spacing3
+            font-weight: 700
+            font-size: 23px
+            position: initial
+            transition: background .3s ease, color .3s ease
+            &:hover
+                background: $color-background-alt
+                color: $color-text-alt
+            &--prev
+                margin-right: $spacing1
+
+                
+        &__toggle
+            display: none
+        .splide__pagination
+            display: none
+            .is-active i
+                display: none
