@@ -8,15 +8,17 @@ header#document-header
     text-decoration-thickness: 2px
 
 // Footer
-.footer-legals nav-legal, .footer-site
+.footer-legals .nav-legal, .footer-site
     display: none;
 
 @include media-breakpoint-up(desktop)
     footer#document-footer
         display: flex
+        padding-top: $spacing5
 
     footer#document-footer .container
         padding-bottom: 0rem;
+        align-items: flex-end;
 
     footer#document-footer .container + .container
         justify-content: flex-end;
