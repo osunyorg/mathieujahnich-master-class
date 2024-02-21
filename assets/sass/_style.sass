@@ -7,9 +7,19 @@ header#document-header
     text-decoration-style: dotted
     text-decoration-thickness: 2px
 
+// Hero 
+.hero 
+    .breadcrumb-nav + .content
+        padding-top: $spacing3
+    
+    @include media-breakpoint-up(desktop) 
+        .content 
+            > h1, > hgroup 
+                width: col(8.5)
+    
 // Footer
 .footer-legals .nav-legal, .footer-site
-    display: none;
+    display: none
 
 @include media-breakpoint-up(desktop)
     footer#document-footer
@@ -17,21 +27,21 @@ header#document-header
         padding-top: $spacing5
 
     footer#document-footer .container
-        padding-bottom: 0rem;
-        align-items: flex-end;
+        padding-bottom: 0rem
+        align-items: flex-end
 
     footer#document-footer .container + .container
-        justify-content: flex-end;
+        justify-content: flex-end
 
 // Block call to action
 body.full-width .block-call_to_action .call_to_action--without-image > div .actions
-    grid-column: 1/13;
+    grid-column: 1/13
 
 body.full-width .block-call_to_action .call_to_action--without-image > div .actions > a
-    border: 2px dotted $color-text;
-    border-radius: 45px;
-    font-size: 23px;
+    border: 2px dotted $color-text
+    border-radius: 45px
+    font-size: 23px
 
 body.full-width .block-call_to_action .block-content 
-    padding-top: 0;
+    padding-top: 0
 
