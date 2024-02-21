@@ -1,11 +1,30 @@
+// Header
 header#document-header 
     border-bottom-style: dotted
     border-bottom-width: 2px
+
 .menu .nav-level-1 > li > a 
     text-decoration-style: dotted
     text-decoration-thickness: 2px
+
+// Footer
+.footer-legals nav-legal, .footer-site
+    display: none;
+
+@include media-breakpoint-up(desktop)
+    footer#document-footer
+        display: flex
+
+    footer#document-footer .container
+        padding-bottom: 0rem;
+
+    footer#document-footer .container + .container
+        justify-content: flex-end;
+
+// Block call to action
 body.full-width .block-call_to_action .call_to_action--without-image > div .actions
     grid-column: 1/13;
+
 body.full-width .block-call_to_action .call_to_action--without-image > div .actions > a
     border: 2px dotted $color-text;
     border-radius: 45px;
@@ -13,3 +32,4 @@ body.full-width .block-call_to_action .call_to_action--without-image > div .acti
 
 body.full-width .block-call_to_action .block-content 
     padding-top: 0;
+
