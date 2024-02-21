@@ -58,11 +58,14 @@ body.full-width .block-call_to_action .block-content
         figcaption
             position: relative
             float: right
-            top: -50%
+            top: -90%
         blockquote
             width: col(9)
     .splide
         button
+            margin-top: $spacing2
+            @include media-breakpoint-up(desktop)
+                margin-top: 0
         &__arrow
             background: transparent
             color: $color-text
