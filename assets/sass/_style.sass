@@ -44,7 +44,7 @@ body.full-width
                 > a 
                     border: 2px dotted $color-text
                     border-radius: 45px
-                    font-size: 23px
+                    font-size: $body-size-desktop
         .block-content 
             padding-top: 0
             padding-bottom: 0
@@ -76,7 +76,7 @@ body.full-width
             width: $spacing3
             height:  $spacing3
             font-weight: 700
-            font-size: 23px
+            font-size: $body-size-desktop
             position: initial
             transition: background .3s ease, color .3s ease
             &:hover
@@ -91,3 +91,29 @@ body.full-width
             display: none
             .is-active i
                 display: none
+
+// programme
+body.full-width
+    .block-programs
+        .programs-grid
+            padding-top: 0
+            padding-bottom: 0
+            @include grid(2, desktop, 0,0)
+            @include grid(3, xl, 0,0)
+            a 
+                border: 2px dotted $color-text
+                border-radius: 45px
+                font-size: $body-size-desktop
+
+@include media-breakpoint-up(desktop) 
+    body.full-width
+        .block-programs
+            .programs-grid
+                article
+                    border: 2px dotted $color-text
+                    margin-left: -2px
+                    margin-top: -3px   
+                    padding: $spacing3
+                    p.title 
+                        @include h2
+                        margin-top: 0px
