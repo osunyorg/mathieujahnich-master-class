@@ -9,16 +9,16 @@ items:
   target: "/sessions/"
   kind: page
   children: []
-- title: À propos
-  target: "/a-propos/"
-  kind: page
-  children: []
 - title: Intervenant·es
   target: "/intervenant-es/"
   kind: page
   children: []
 - title: Avis
   target: "/avis/"
+  kind: page
+  children: []
+- title: À propos
+  target: "/a-propos/"
   kind: page
   children: []
 
