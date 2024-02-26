@@ -1,5 +1,6 @@
 // Header
 header#document-header 
+    border-color: $gold
     border-bottom-style: dotted
     border-bottom-width: 2px
 
@@ -15,7 +16,7 @@ header#document-header
     @include media-breakpoint-up(desktop) 
         .content 
             > h1, > hgroup 
-                width: col(8.5)
+                width: col(9)
     
 // Footer
 .footer-legals .nav-legal, .footer-site
@@ -31,9 +32,8 @@ header#document-header
             + .container
                 justify-content: flex-end
 
-// Block call to action 
-body.full-width
-    .block-call_to_action
+.block-call_to_action
+    @include in-page-without-sidebar
         .call_to_action 
             padding-top: 0
             padding-bottom: 0
@@ -49,8 +49,17 @@ body.full-width
             padding-top: 0
             padding-bottom: 0
 
-// Block testimonials
 .block-testimonials
+    blockquote
+        p
+            position: relative
+            &::after
+                content: "”"
+                font-size: px2rem(142)
+                position: absolute
+                top: px2rem(20)
+                right: px2rem(-50)
+
     @include media-breakpoint-up(desktop)
         @include in-page-without-sidebar
             figure
@@ -61,6 +70,7 @@ body.full-width
             position: relative
             float: right
             top: calc(-100% + 63px)
+            text-align: right
         blockquote
             width: col(9)
     .splide
@@ -92,9 +102,8 @@ body.full-width
             .is-active i
                 display: none
 
-// programme
-body.full-width
-    .block-programs
+.block-programs
+    @include in-page-without-sidebar
         .programs-grid
             padding-top: 0
             padding-bottom: 0
@@ -104,11 +113,7 @@ body.full-width
                 border: 2px dotted $color-text
                 border-radius: 45px
                 font-size: $body-size-desktop
-
-@include media-breakpoint-up(desktop) 
-    body.full-width
-        .block-programs
-            .programs-grid
+            @include media-breakpoint-up(desktop) 
                 article
                     border: 2px dotted $color-text
                     margin-left: -2px
