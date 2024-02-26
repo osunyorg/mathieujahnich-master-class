@@ -17,4 +17,8 @@ items:
   target: "/avis/"
   kind: page
   children: []
+- title: Sessions
+  target: "/sessions/"
+  kind: page
+  children: []
 
