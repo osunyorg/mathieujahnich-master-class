@@ -71,12 +71,7 @@ header#document-header
     blockquote
         p
             position: relative
-            &::after
-                content: "”"
-                font-size: px2rem(142)
-                position: absolute
-                top: px2rem(20)
-                right: px2rem(-50)
+            
 
     @include media-breakpoint-up(desktop)
         @include in-page-without-sidebar
@@ -87,10 +82,17 @@ header#document-header
         figcaption
             position: relative
             float: right
-            top: calc(-100% + 63px)
+            top: calc(-100%)
             text-align: right
+            &::before
+                content: "”"
+                font-size: px2rem(142)
+                position: relative
+                top: 0
+                right: px2rem(16)
         blockquote
             width: col(9)
+            height: 100%
     .splide
         button
             margin-top: $spacing2
