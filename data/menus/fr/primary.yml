@@ -10,7 +10,7 @@ items:
   kind: page
   children: []
 - title: Intervenant·es
-  target: "/intervenantes/"
+  target: "/intervenant-es/intervenantes/"
   kind: page
   children: []
 - title: Avis
