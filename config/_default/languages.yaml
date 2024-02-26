@@ -13,7 +13,6 @@ fr:
   permalinks:
     events: /sessions/:year-:month-:day-:slug/
     events_categories: /sessions/:slug/
-    diplomas: /diplomes/:slug/
     programs: /programme/:slug/
     publications: /publications/:year-:slug/
     persons: /intervenant-es/:slug/
