@@ -14,9 +14,9 @@ fr:
     diplomas: /diplomes/:slug/
     programs: /programme/:slug/
     publications: /publications/:year-:slug/
-    persons: /equipe/:slug/
-    researchers: /equipe/:slug/publications/
-    teachers: /equipe/:slug/programs/
+    persons: /intervenant-es/:slug/
+    researchers: /intervenant-es/:slug/publications/
+    teachers: /intervenant-es/:slug/programs/
   taxonomies:
     administrator: administrators
     author: authors
