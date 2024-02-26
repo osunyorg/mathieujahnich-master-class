@@ -5,6 +5,10 @@ items:
   target: "/programme/"
   kind: page
   children: []
+- title: Sessions
+  target: "/sessions/"
+  kind: page
+  children: []
 - title: À propos
   target: "/a-propos/"
   kind: page
@@ -15,10 +19,6 @@ items:
   children: []
 - title: Avis
   target: "/avis/"
-  kind: page
-  children: []
-- title: Sessions
-  target: "/sessions/"
   kind: page
   children: []
 
