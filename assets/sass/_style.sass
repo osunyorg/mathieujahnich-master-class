@@ -156,10 +156,21 @@ header#document-header
                     @include h2
                     margin-top: 0px
 
-.taxonomies-persons
-    display: none
+
+
+
 .persons__page, .persons__section
+    .taxonomies-persons
+        display: none
     .avatar
         img
             filter: grayscale(1)
             -webkit-filter: grayscale(1)
+
+.programs__section
+    #accessibilite 
+        p::before
+            display: block
+            float: left
+            margin-right: $spacing1
+            content: url("/assets/images/disability_symbols.svg")
