@@ -1,12 +1,12 @@
 ---
 title: Informations légales
 items:
-- title: Mentions légales
-  target: "/mentions-legales/"
-  kind: page
-  children: []
 - title: Contact
   target: mailto:formation@mathieu-jahnich.fr
   kind: url
+  children: []
+- title: Mentions légales
+  target: "/mentions-legales/"
+  kind: page
   children: []
 
