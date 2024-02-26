@@ -98,7 +98,7 @@ header#document-header
                 font-size: px2rem(142)
                 position: relative
                 top: 0
-                right: px2rem(16)
+                right: px2rem(52)
         blockquote
             width: col(9)
             height: 100%
@@ -132,6 +132,10 @@ header#document-header
                 display: none
 
 .block-programs
+    .container 
+        padding: 0
+        margin: 0
+        max-width: 100%
     .programs-grid
         @include in-page-without-sidebar
             padding-top: 0
@@ -156,9 +160,6 @@ header#document-header
                     @include h2
                     margin-top: 0px
 
-
-
-
 .persons__page, .persons__section
     .taxonomies-persons
         display: none
@@ -174,3 +175,7 @@ header#document-header
             float: left
             margin-right: $spacing1
             content: url("/assets/images/disability_symbols.svg")
+
+.event-sidebar
+    ul.share > li:last-child
+        display: none
