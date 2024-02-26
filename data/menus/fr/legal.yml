@@ -9,4 +9,8 @@ items:
   target: "/mentions-legales/"
   kind: page
   children: []
+- title: "© 2024 Master Class Communication responsable"
+  target: ''
+  kind: blank
+  children: []
 
