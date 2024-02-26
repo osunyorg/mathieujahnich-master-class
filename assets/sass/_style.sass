@@ -4,14 +4,22 @@ header#document-header
     border-bottom-style: dotted
     border-bottom-width: 2px
 
-.menu .nav-level-1 > li > a 
-    text-decoration-style: dotted
-    text-decoration-thickness: 2px
-
+.menu .nav-level-1 > li 
+    a.active
+        text-decoration: underline
+        text-decoration-style: dotted
+    > a, > a:focus
+        text-decoration-style: dotted
+        text-decoration-thickness: 2px
 // Hero 
 .hero 
-    .breadcrumb-nav + .content
-        padding-top: $spacing3
+    .breadcrumb-nav 
+        margin-top: $spacing2
+        a:hover
+            text-decoration-style: dotted
+            text-decoration-thickness: 2px
+        + .content
+            padding-top: $spacing3
     
     @include media-breakpoint-up(desktop) 
         .content 
@@ -27,14 +35,15 @@ header#document-header
         align-items: start
 
         .footer
-            &-social, &-legals
+            &-legals
             display: block
             text-align: left
             &-social
+                display: none
                 order: initial
             &-credit, &-legals
-                margin-top: 0
-                width: max-content;
+                //margin-top: $spacing1 
+                width: max-content
 
 @include media-breakpoint-up(desktop)
     footer#document-footer
@@ -110,8 +119,8 @@ header#document-header
             position: initial
             transition: background .3s ease, color .3s ease
             &:hover
-                background: $color-background-alt
-                color: $color-text-alt
+                background: $blue
+                color: $gold
                 cursor: pointer
             &--prev
                 margin-right: $spacing1
@@ -146,3 +155,11 @@ header#document-header
                 p.title 
                     @include h2
                     margin-top: 0px
+
+.taxonomies-persons
+    display: none
+.persons__page, .persons__section
+    .avatar
+        img
+            filter: grayscale(1)
+            -webkit-filter: grayscale(1)
