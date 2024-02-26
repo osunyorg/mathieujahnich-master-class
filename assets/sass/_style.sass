@@ -168,13 +168,19 @@ header#document-header
             filter: grayscale(1)
             -webkit-filter: grayscale(1)
 
+
+
+    
 .programs__section
-    #accessibilite 
-        p::before
-            display: block
-            float: left
-            margin-right: $spacing1
-            content: url("/assets/images/disability_symbols.svg")
+    main 
+        div#essentiel.essential-container
+            display: none
+        #accessibilite 
+            p::before
+                display: block
+                float: left
+                margin-right: $spacing1
+                content: url("/assets/images/disability_symbols.svg")
 
 .event-sidebar
     ul.share > li:last-child
