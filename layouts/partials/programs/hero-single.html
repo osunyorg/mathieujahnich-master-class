@@ -1,0 +1,59 @@
+{{- $breadcrumb_is_after_hero := eq site.Params.breadcrumb.position "after-hero"  -}}
+{{- $title := or .Params.header_text .Title -}}
+{{ $subtitle := "" }}
+{{- $summary := .Params.summary | safeHTML -}}
+{{ if and (eq site.Params.summary.position "hero") $summary }}
+  {{ $subtitle = $summary }}
+{{ end }}
+
+<header class="hero hero-program {{ if $breadcrumb_is_after_hero -}} hero--no-margin {{- end }}">
+  <div class="container">
+    {{- if eq site.Params.breadcrumb.position "hero-start" -}}
+      {{- if .Params.breadcrumb | default true -}}
+        {{ partial "header/breadcrumbs.html" . }}
+      {{- end -}}
+    {{- end -}}
+    <div class="content">
+      {{- if $subtitle -}}
+        <hgroup>
+          <h1>{{ partial "PrepareHTML" $title }}</h1>
+          <p class="lead">{{ partial "PrepareHTML" $subtitle }}</p>
+        </hgroup>
+      {{- else -}}
+        <h1>{{ partial "PrepareHTML" $title }}</h1>
+      {{- end -}}
+      <div class="hero-program-infos">
+        {{- if .Params.teachers -}}
+          <div class="hero-program-infos-teachers">
+            {{ $title := i18n "programs.teachers" -}}
+            <h3>{{ $title }}</h3>
+            {{- partial "programs/hero-teachers.html"
+            (dict
+            "title" $title
+            "teachers" .Params.teachers
+            "descriptions" .Params.teachers_description
+            ) -}}
+          </div>
+        {{- end -}}
+        <div class="hero-program-infos-meta">
+          <p>Durée</p>
+          <p>3h00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{- if eq site.Params.breadcrumb.position "hero-end" -}}
+    {{- if .Params.breadcrumb | default true -}}
+      {{ partial "header/breadcrumbs.html" . }}
+    {{- end -}}
+  {{- end -}}
+</header>
+
+{{- if $breadcrumb_is_after_hero -}}
+  {{- if .Params.breadcrumb | default true -}}
+    <div class="container breadcrumb-container">
+      {{ partial "header/breadcrumbs.html" . }}
+    </div>
+  {{- end -}}
+{{- end -}}

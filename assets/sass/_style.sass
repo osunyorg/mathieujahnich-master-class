@@ -187,13 +187,7 @@ body.full-width
                     &:nth-child(2n+2)
                         border-right: none
 
-        //         div > a
-        //             font-size: $body-size-desktop
-        //         p.title 
-        //             @include h2
-        //             margin-top: 0px
-
-.persons__page, .persons__section
+.persons__page, .persons__section, .hero-program
     .taxonomies-persons
         display: none
     .avatar
@@ -230,3 +224,52 @@ body.full-width
     .toc
         &-cta, &-container
             display: none
+
+.hero-program
+    .content
+        @include media-breakpoint-up(desktop)    
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            flex-direction: row
+    &-infos
+        width: fit-content
+        @include media-breakpoint-up(desktop)
+            smargin-left: $spacing2
+        
+        &-teachers 
+            display: flex
+            flex-direction: row
+            width: 100%
+            align-items: center
+            ul
+                display: flex
+                li 
+                    display: flex
+                    flex-direction: column-reverse
+                    padding-left: $spacing1
+                    > a
+                        border-radius: 45px
+                        overflow: hidden
+                        width: 70px
+                        height: 70px
+                        
+                        &::before
+                            content: ""
+                        &::after   
+                            content: ""
+                        img
+                            filter: grayscale(1)
+                            -webkit-filter: grayscale(1)
+        &-meta
+            border-color: $gold
+            border-bottom-style: dotted
+            border-bottom-width: 2px
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            flex-direction: row
+            p
+                @include h3
+            p:last-child
+                font-weight: normal
