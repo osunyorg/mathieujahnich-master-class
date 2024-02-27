@@ -25,8 +25,12 @@ header#document-header
         .content 
             > h1, > hgroup 
                 width: col(7)
+.page__home    
+     @include media-breakpoint-up(desktop) 
+        .content 
+            > h1, > hgroup 
+                width: col(9)
 
-    
 #document-footer
     .footer-site
         display: none
