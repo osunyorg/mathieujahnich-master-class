@@ -141,52 +141,6 @@ body.full-width
             .is-active i
                 display: none
 
-.block-programs
-    .container 
-        @include media-breakpoint-up(desktop) 
-            padding: 0
-            margin: 0
-            max-width: 100%
-
-    .programs-grid
-        @include in-page-without-sidebar
-            padding-top: 0
-            padding-bottom: 0
-            @include grid(2, desktop, 0,0)
-            @include grid(3, xl, 0,0)
-
-        article
-            a
-                .more
-                    @include btn
-                    width: fit-content
-                    border: 2px dotted $color-text
-                    border-radius: 45px
-                    transition: background .3s ease, color .3s ease
-                    &:hover
-                        background: $blue
-                        color: $gold
-                    &::after
-                        content: ""
-                        
-
-            @include media-breakpoint-up(xl) 
-                &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
-                    border-top: none
-                &:nth-child(3n+3)
-                    border-right: none
-
-            @include media-breakpoint-up(desktop) 
-                border-bottom: 2px dotted $color-text
-                border-top: 2px dotted $color-text
-                border-right: 2px dotted $color-text
-                padding: $spacing3
-                @include media-breakpoint-down(xl) 
-                    &:nth-child(2n+3), &:nth-child(2n+4)
-                        border-top: none
-                    &:nth-child(2n+2)
-                        border-right: none
-
 .persons__page, .persons__section, .hero-program
     .taxonomies-persons
         display: none
@@ -273,3 +227,89 @@ body.full-width
                 @include h3
             p:last-child
                 font-weight: normal
+
+
+// REMOVE WHEN BLOCK AVAILABLE IN OSUNY
+.block-programs
+    .programs
+        li
+            display: block
+            a
+                @include h3
+                @include arrow-right-hover
+                display: flex
+                justify-content: space-between
+                transition: color 0.55s
+                padding-right: $spacing2
+                &:hover
+                    color: $color-accent
+                @include in-page-without-sidebar
+                    @include h2
+
+    .programs-grid
+        @include grid(2, xl)
+        @include in-page-without-sidebar
+            @include grid(2, desktop)
+            @include grid(3, xl)
+        article
+            margin-bottom: $spacing3
+            @include media-breakpoint-up(desktop)
+                margin-bottom: 0
+            .title 
+                @include h3
+                margin-bottom: $spacing0
+                @include media-breakpoint-up(desktop)
+                    margin-bottom: 0
+            a
+                text-decoration: none               
+                .more
+                    @include icon(arrow-right, after, true)
+                    margin-top: $spacing0
+
+//////
+
+.block-programs
+    .container 
+        @include media-breakpoint-up(desktop) 
+            padding: 0
+            margin: 0
+            max-width: 100%
+
+    .programs-grid
+        @include in-page-without-sidebar
+            padding-top: 0
+            padding-bottom: 0
+            @include grid(2, desktop, 0,0)
+            @include grid(3, xl, 0,0)
+
+        article
+            a
+                .more
+                    @include btn
+                    width: fit-content
+                    border: 2px dotted $color-text
+                    border-radius: 45px
+                    transition: background .3s ease, color .3s ease
+                    &:hover
+                        background: $blue
+                        color: $gold
+                    &::after
+                        content: ""
+                        
+
+            @include media-breakpoint-up(xl) 
+                &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
+                    border-top: none
+                &:nth-child(3n+3)
+                    border-right: none
+
+            @include media-breakpoint-up(desktop) 
+                border-bottom: 2px dotted $color-text
+                border-top: 2px dotted $color-text
+                border-right: 2px dotted $color-text
+                padding: $spacing3
+                @include media-breakpoint-down(xl) 
+                    &:nth-child(2n+3), &:nth-child(2n+4)
+                        border-top: none
+                    &:nth-child(2n+2)
+                        border-right: none
