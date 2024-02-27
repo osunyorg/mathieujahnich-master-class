@@ -180,8 +180,16 @@ header#document-header
                 display: block
                 float: left
                 margin-right: $spacing1
+                margin-top: $spacing1
                 content: url("/assets/images/disability_symbols.svg")
-
+            @include media-breakpoint-up(desktop)      
+                p::before 
+                    position: relative
+                    width: 0
+                    left: -$spacing5
+                    top: $spacing0
+                    margin-right: 0
+                    margin-top: 0
 .event-sidebar
     ul.share > li:last-child
         display: none
