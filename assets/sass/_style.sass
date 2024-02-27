@@ -1,4 +1,3 @@
-// Header
 header#document-header 
     border-color: $gold
     border-bottom-style: dotted
@@ -11,7 +10,7 @@ header#document-header
     > a, > a:focus
         text-decoration-style: dotted
         text-decoration-thickness: 2px
-// Hero 
+
 .hero 
     .breadcrumb-nav 
         margin-top: $spacing2
@@ -38,7 +37,6 @@ header#document-header
         flex-direction: column
         align-content: flex-end
         align-items: start
-
         .footer
             &-legals
             display: block
@@ -47,15 +45,12 @@ header#document-header
                 display: none
                 order: initial
             &-credit, &-legals
-                //margin-top: $spacing1 
                 width: max-content
 
 @include media-breakpoint-up(desktop)
     footer#document-footer
         display: flex
-        
         padding-top: $spacing5
-
         .container
             padding-bottom: 0rem
             + .container
@@ -63,7 +58,6 @@ header#document-header
                 align-items: flex-start
                 padding-top: 0
                 justify-content: flex-end
-
 
 body.full-width
     .block-call_to_action
@@ -76,7 +70,7 @@ body.full-width
                     padding-top: 0
                     padding-bottom: 0
                     > a 
-                        @include meta;
+                        @include meta
 .block-call_to_action
     .block-content 
         padding-top: 0
@@ -160,24 +154,29 @@ body.full-width
             padding-bottom: 0
             @include grid(2, desktop, 0,0)
             @include grid(3, xl, 0,0)
-        article
-            div > a 
-                border: 2px dotted $color-text
-                border-radius: 45px
-                @include meta
 
-        @include media-breakpoint-up(xl) 
-            article
-                border-bottom: 2px dotted $color-text
-                border-top: 2px dotted $color-text
-                border-right: 2px dotted $color-text
+        article
+            a
+                .more
+                    @include btn
+                    width: fit-content
+                    border: 2px dotted $color-text
+                    border-radius: 45px
+                    transition: background .3s ease, color .3s ease
+                    &:hover
+                        background: $blue
+                        color: $gold
+                    &::after
+                        content: ""
+                        
+
+            @include media-breakpoint-up(xl) 
                 &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
                     border-top: none
                 &:nth-child(3n+3)
                     border-right: none
 
-        @include media-breakpoint-up(desktop) 
-            article
+            @include media-breakpoint-up(desktop) 
                 border-bottom: 2px dotted $color-text
                 border-top: 2px dotted $color-text
                 border-right: 2px dotted $color-text
@@ -187,11 +186,12 @@ body.full-width
                         border-top: none
                     &:nth-child(2n+2)
                         border-right: none
-                div > a
-                    font-size: $body-size-desktop
-                p.title 
-                    @include h2
-                    margin-top: 0px
+
+        //         div > a
+        //             font-size: $body-size-desktop
+        //         p.title 
+        //             @include h2
+        //             margin-top: 0px
 
 .persons__page, .persons__section
     .taxonomies-persons
