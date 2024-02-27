@@ -64,29 +64,40 @@ header#document-header
                 padding-top: 0
                 justify-content: flex-end
 
+
+body.full-width
+    .block-call_to_action
+        .block-content 
+            padding-top: 0
+            padding-bottom: 0
+            .call_to_action 
+                .actions
+                    grid-column: 1/13
+                    padding-top: 0
+                    padding-bottom: 0
+                    > a 
+                        @include meta;
 .block-call_to_action
-    @include in-page-without-sidebar
+    .block-content 
+        padding-top: 0
+        padding-bottom: 0
         .call_to_action 
             padding-top: 0
             padding-bottom: 0
-            > div .actions
+            .actions
                 grid-column: 1/13
                 padding-top: 0
                 padding-bottom: 0
                 > a 
                     border: 2px dotted $color-text
                     border-radius: 45px
-                    font-size: $body-size-desktop
-        .block-content 
-            padding-top: 0
-            padding-bottom: 0
+                    font-size: $body-size
 
 .block-testimonials
     blockquote
         p
             position: relative
             
-
     @include media-breakpoint-up(desktop)
         @include in-page-without-sidebar
             figure
@@ -138,9 +149,11 @@ header#document-header
 
 .block-programs
     .container 
-        padding: 0
-        margin: 0
-        max-width: 100%
+        @include media-breakpoint-up(desktop) 
+            padding: 0
+            margin: 0
+            max-width: 100%
+
     .programs-grid
         @include in-page-without-sidebar
             padding-top: 0
@@ -151,7 +164,7 @@ header#document-header
             div > a 
                 border: 2px dotted $color-text
                 border-radius: 45px
-                font-size: $body-size-desktop
+                @include meta
 
         @include media-breakpoint-up(xl) 
             article
@@ -161,7 +174,6 @@ header#document-header
                 &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
                     border-top: none
                 &:nth-child(3n+3)
-                    //background: red
                     border-right: none
 
         @include media-breakpoint-up(desktop) 
@@ -176,7 +188,7 @@ header#document-header
                     &:nth-child(2n+2)
                         border-right: none
                 div > a
-                    font-size: $body-size
+                    font-size: $body-size-desktop
                 p.title 
                     @include h2
                     margin-top: 0px
