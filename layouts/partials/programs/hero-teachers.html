@@ -5,15 +5,15 @@
       {{- $person := site.GetPage (printf "/persons/%s" $slug) -}}
       {{- with $person -}}
       <li>
-        <a href="{{ .Permalink }}">
-                {{- if .Params.image }}
-                {{ partial "commons/image.html"
-                (dict
-                "alt"      .Title
-                "image"    .Params.image
-                "sizes"    site.Params.image_sizes.sections.persons.item
-                )}}
-                {{ end -}}
+        <a  class="avatar" href="{{ .Permalink }}">
+          {{- if .Params.image }}
+          {{ partial "commons/image.html"
+          (dict
+          "alt"      .Title
+          "image"    .Params.image
+          "sizes"    site.Params.image_sizes.sections.persons.item
+          )}}
+          {{ end -}}
         </a>
       </li>
     {{- end -}}

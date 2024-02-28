@@ -12,13 +12,12 @@ header#document-header
         text-decoration-thickness: 2px
 
 
-
-
 .hero 
     .breadcrumb-nav 
         margin-top: $spacing2
-        width: fit-content
-        float: left
+        @include media-breakpoint-up(desktop) 
+            width: fit-content
+            display: inline-block
         a:hover
             text-decoration-style: dotted
             text-decoration-thickness: 2px
@@ -28,7 +27,7 @@ header#document-header
     @include media-breakpoint-up(desktop) 
         .content 
             > h1, > hgroup 
-               // width: col(7)
+                width: col(7)
 .page__home    
      @include media-breakpoint-up(desktop) 
         .content 
@@ -147,31 +146,22 @@ body.full-width
             display: none
             .is-active i
                 display: none
+                
 .persons__page, .persons__section,.hero-program
     .taxonomies-persons
         display: none
-    .avatar
-        background-color: $blue
-        picture
-            mix-blend-mode: screen
-            &::before   
-                display: block
-                content: " "
-                background-color: $gold
-                position: relative
-                width: 100%
-                height: 100%
-                top: 0
-                left: 0
-                mix-blend-mode: normal
-            img
-                -webkit-filter: grayscale(1)
-                filter: grayscale(1)
-                mix-blend-mode: multiply
-                position: relative
-                top: -100%
-                left: 0
-            
+
+
+.avatar 
+    background-color: $blue
+    picture
+        mix-blend-mode: screen
+        background-color: $gold
+        img
+            filter: grayscale(1)
+            mix-blend-mode: multiply 
+
+
 .programs__section
     main 
         div.essential-container
@@ -206,11 +196,11 @@ body.full-width
     .content
         display: block
         @include media-breakpoint-up(desktop)    
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            flex-direction: row;
-            width: 100%;
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            flex-direction: row
+            width: 100%
     &-infos
         min-width: col(4)
         width: fit-content
@@ -240,32 +230,9 @@ body.full-width
                     display: flex
                     flex-direction: column-reverse
                     padding-left: $spacing1
-                    mix-blend-mode: screen
                     > a
-                        border-radius: 45px
-                        overflow: hidden
                         width: 70px
                         height: 70px
-                        &::after
-                            content: ""
-                        &::before   
-                            display: block
-                            content: " "
-                            background-color: $gold
-                            position: relative
-                            width: 100%
-                            height: 100%
-                            top: 0
-                            left: 0
-                        
-                        picture
-                            img
-                                -webkit-filter: grayscale(1)
-                                filter: grayscale(1)
-                                mix-blend-mode: multiply
-                                position: relative
-                                top: -100%
-                                left: 0
                                 
         &-meta
             border-color: $gold
