@@ -71,6 +71,8 @@ body.full-width
                     padding-bottom: 0
                     > a 
                         @include meta
+                        padding: $spacing0 $spacing1
+                    
 .block-call_to_action
     .block-content 
         padding-top: 0
@@ -228,46 +230,6 @@ body.full-width
             p:last-child
                 font-weight: normal
 
-
-// // REMOVE WHEN BLOCK AVAILABLE IN OSUNY
-// .block-programs
-//     .programs
-//         li
-//             display: block
-//             a
-//                 @include h3
-//                 @include arrow-right-hover
-//                 display: flex
-//                 justify-content: space-between
-//                 transition: color 0.55s
-//                 padding-right: $spacing2
-//                 &:hover
-//                     color: $color-accent
-//                 @include in-page-without-sidebar
-//                     @include h2
-
-//     .programs-grid
-//         @include grid(2, xl)
-//         @include in-page-without-sidebar
-//             @include grid(2, desktop)
-//             @include grid(3, xl)
-//         article
-//             margin-bottom: $spacing3
-//             @include media-breakpoint-up(desktop)
-//                 margin-bottom: 0
-//             .title 
-//                 @include h3
-//                 margin-bottom: $spacing0
-//                 @include media-breakpoint-up(desktop)
-//                     margin-bottom: 0
-//             a
-//                 text-decoration: none               
-//                 .more
-//                     @include icon(arrow-right, after, true)
-//                     margin-top: $spacing0
-
-// //////
-
 .block-programs
     .container 
         @include media-breakpoint-up(desktop) 
@@ -283,12 +245,38 @@ body.full-width
             @include grid(3, xl, 0,0)
 
         article
-            div a
-                background: none
-                padding: 0px
+            display: flex
+            flex-direction: column
+            margin-bottom: 0px
+            border-top: 2px dotted $blue
+            
+            padding: $spacing1 0
+            p.title
+                @include h2
+                margin-bottom: 0
+                @include media-breakpoint-up(desktop)
+                    margin-bottom: $spacing4
+            &::before
+                @include meta
+                content: "Durée: 3h00"
+                margin-bottom: $spacing0
+            .media
+                height: 0
+            > div 
+                display: flex
+                height: 100%
+                flex-direction: column
+                justify-content: space-between
+                > p
+                    margin-bottom: $spacing0
+                    @include media-breakpoint-up(desktop)
+                        margin-bottom: $spacing1
+                a
+                    background: none
+                    padding: 0px
                 p.more.meta
+                    padding: $spacing0 $spacing1
                     margin-top: 0px
-                    @include btn
                     width: fit-content
                     border: 2px dotted $color-text
                     border-radius: 45px
