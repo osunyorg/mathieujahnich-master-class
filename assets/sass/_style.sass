@@ -229,44 +229,44 @@ body.full-width
                 font-weight: normal
 
 
-// REMOVE WHEN BLOCK AVAILABLE IN OSUNY
-.block-programs
-    .programs
-        li
-            display: block
-            a
-                @include h3
-                @include arrow-right-hover
-                display: flex
-                justify-content: space-between
-                transition: color 0.55s
-                padding-right: $spacing2
-                &:hover
-                    color: $color-accent
-                @include in-page-without-sidebar
-                    @include h2
+// // REMOVE WHEN BLOCK AVAILABLE IN OSUNY
+// .block-programs
+//     .programs
+//         li
+//             display: block
+//             a
+//                 @include h3
+//                 @include arrow-right-hover
+//                 display: flex
+//                 justify-content: space-between
+//                 transition: color 0.55s
+//                 padding-right: $spacing2
+//                 &:hover
+//                     color: $color-accent
+//                 @include in-page-without-sidebar
+//                     @include h2
 
-    .programs-grid
-        @include grid(2, xl)
-        @include in-page-without-sidebar
-            @include grid(2, desktop)
-            @include grid(3, xl)
-        article
-            margin-bottom: $spacing3
-            @include media-breakpoint-up(desktop)
-                margin-bottom: 0
-            .title 
-                @include h3
-                margin-bottom: $spacing0
-                @include media-breakpoint-up(desktop)
-                    margin-bottom: 0
-            a
-                text-decoration: none               
-                .more
-                    @include icon(arrow-right, after, true)
-                    margin-top: $spacing0
+//     .programs-grid
+//         @include grid(2, xl)
+//         @include in-page-without-sidebar
+//             @include grid(2, desktop)
+//             @include grid(3, xl)
+//         article
+//             margin-bottom: $spacing3
+//             @include media-breakpoint-up(desktop)
+//                 margin-bottom: 0
+//             .title 
+//                 @include h3
+//                 margin-bottom: $spacing0
+//                 @include media-breakpoint-up(desktop)
+//                     margin-bottom: 0
+//             a
+//                 text-decoration: none               
+//                 .more
+//                     @include icon(arrow-right, after, true)
+//                     margin-top: $spacing0
 
-//////
+// //////
 
 .block-programs
     .container 
@@ -283,8 +283,10 @@ body.full-width
             @include grid(3, xl, 0,0)
 
         article
-            a
-                .more
+            div a
+                padding: 0px
+                p.more.meta
+                    margin-top: 0px
                     @include btn
                     width: fit-content
                     border: 2px dotted $color-text
@@ -294,8 +296,7 @@ body.full-width
                         background: $blue
                         color: $gold
                     &::after
-                        content: ""
-                        
+                        content: ""            
 
             @include media-breakpoint-up(xl) 
                 &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
