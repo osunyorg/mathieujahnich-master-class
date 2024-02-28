@@ -11,9 +11,14 @@ header#document-header
         text-decoration-style: dotted
         text-decoration-thickness: 2px
 
+
+
+
 .hero 
     .breadcrumb-nav 
         margin-top: $spacing2
+        width: fit-content
+        float: left
         a:hover
             text-decoration-style: dotted
             text-decoration-thickness: 2px
@@ -23,7 +28,7 @@ header#document-header
     @include media-breakpoint-up(desktop) 
         .content 
             > h1, > hgroup 
-                width: col(7)
+               // width: col(7)
 .page__home    
      @include media-breakpoint-up(desktop) 
         .content 
@@ -199,22 +204,36 @@ body.full-width
 
 .hero-program
     .content
+        display: block
         @include media-breakpoint-up(desktop)    
-            display: flex
-            justify-content: space-between
-            align-items: flex-end
-            flex-direction: row
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
     &-infos
+        min-width: col(4)
         width: fit-content
-        margin-top: $spacing3
-        // @include media-breakpoint-up(desktop)
-        //     smargin-left: $spacing2
+        @include media-breakpoint-up(desktop)    
+            margin-top: $spacing3
         
         &-teachers 
-            display: flex
             flex-direction: row
-            width: 100%
             align-items: center
+            justify-content: flex-end
+            &.top
+                display: flex
+                padding-top: $spacing1
+                width: fit-content
+                min-width: col(4)
+                float: right
+                justify-content: flex-start
+                @include media-breakpoint-down(xl)
+                    display: none
+            &.bottom
+                display: none
+                @include media-breakpoint-down(xl)
+                    display: flex
             ul
                 display: flex
                 li 

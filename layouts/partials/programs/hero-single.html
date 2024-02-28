@@ -8,11 +8,21 @@
 
 <header class="hero hero-program {{ if $breadcrumb_is_after_hero -}} hero--no-margin {{- end }}">
   <div class="container">
-    {{- if eq site.Params.breadcrumb.position "hero-start" -}}
       {{- if .Params.breadcrumb | default true -}}
         {{ partial "header/breadcrumbs.html" . }}
+        {{- if .Params.teachers -}}
+        <div class="hero-program-infos-teachers top">
+          {{ $title := i18n "programs.teachers" -}}
+          <h4>{{ $title }}</h4>
+          {{- partial "programs/hero-teachers.html"
+          (dict
+          "title" $title
+          "teachers" .Params.teachers
+          "descriptions" .Params.teachers_description
+          ) -}}
+        </div>
       {{- end -}}
-    {{- end -}}
+      {{- end -}}
     <div class="content">
       {{- if $subtitle -}}
         <hgroup>
@@ -24,17 +34,17 @@
       {{- end -}}
       <div class="hero-program-infos">
         {{- if .Params.teachers -}}
-          <div class="hero-program-infos-teachers">
-            {{ $title := i18n "programs.teachers" -}}
-            <h4>{{ $title }}</h4>
-            {{- partial "programs/hero-teachers.html"
-            (dict
-            "title" $title
-            "teachers" .Params.teachers
-            "descriptions" .Params.teachers_description
-            ) -}}
-          </div>
-        {{- end -}}
+        <div class="hero-program-infos-teachers bottom">
+          {{ $title := i18n "programs.teachers" -}}
+          <h4>{{ $title }}</h4>
+          {{- partial "programs/hero-teachers.html"
+          (dict
+          "title" $title
+          "teachers" .Params.teachers
+          "descriptions" .Params.teachers_description
+          ) -}}
+        </div>
+      {{- end -}}
         <div class="hero-program-infos-meta">
           <p>Durée</p>
           <p>3h00</p>
@@ -42,12 +52,6 @@
       </div>
     </div>
   </div>
-
-  {{- if eq site.Params.breadcrumb.position "hero-end" -}}
-    {{- if .Params.breadcrumb | default true -}}
-      {{ partial "header/breadcrumbs.html" . }}
-    {{- end -}}
-  {{- end -}}
 </header>
 
 {{- if $breadcrumb_is_after_hero -}}
