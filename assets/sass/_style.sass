@@ -11,28 +11,24 @@ header#document-header
         text-decoration-style: dotted
         text-decoration-thickness: 2px
 
-
 .hero 
     .breadcrumb-nav 
-        margin-top: $spacing2
-        @include media-breakpoint-up(desktop) 
-            width: fit-content
-            display: inline-block
+        margin-top: $spacing-4
         a:hover
             text-decoration-style: dotted
             text-decoration-thickness: 2px
         + .content
-            padding-top: $spacing3
+            padding-top: $spacing-5
     
     @include media-breakpoint-up(desktop) 
         .content 
             > h1, > hgroup 
-                width: col(7)
+                width: columns(7)
 .page__home    
      @include media-breakpoint-up(desktop) 
         .content 
             > h1, > hgroup 
-                width: col(9)
+                width: columns(9)
 
 #document-footer
     .footer-site
@@ -54,7 +50,7 @@ header#document-header
 @include media-breakpoint-up(desktop)
     footer#document-footer
         display: flex
-        padding-top: $spacing5
+        padding-top: $spacing-7
         .container
             padding-bottom: 0rem
             + .container
@@ -75,7 +71,7 @@ body.full-width
                     padding-bottom: 0
                     > a 
                         @include meta
-                        padding: $spacing0 $spacing1
+                        padding: $spacing-2 $spacing-3
                     
 .block-call_to_action
     .block-content 
@@ -111,16 +107,16 @@ body.full-width
             text-align: right
             &::before
                 content: "”"
-                font-size: px2rem(142)
+                font-size: pxToRem(142)
                 position: relative
                 top: 0
-                right: px2rem(52)
+                right: pxToRem(52)
         blockquote
-            width: col(9)
+            width: columns(9)
             height: 100%
     .splide
         button
-            margin-top: $spacing2
+            margin-top: $spacing-4
             @include media-breakpoint-up(desktop)
                 margin-top: 0
         &__arrow
@@ -128,8 +124,8 @@ body.full-width
             color: $color-text
             border: 2px dotted $color-text
             border-radius: 45px
-            width: $spacing3
-            height:  $spacing3
+            width: $spacing-5
+            height:  $spacing-5
             font-weight: 700
             font-size: $body-size-desktop
             position: initial
@@ -139,7 +135,7 @@ body.full-width
                 color: $gold
                 cursor: pointer
             &--prev
-                margin-right: $spacing1
+                margin-right: $spacing-3
         &__toggle
             display: none
         .splide__pagination
@@ -171,15 +167,15 @@ body.full-width
             p::before
                 display: block
                 float: left
-                margin-right: $spacing1
-                margin-top: $spacing1
+                margin-right: $spacing-3
+                margin-top: $spacing-3
                 content: url("/assets/images/disability_symbols.svg")
             @include media-breakpoint-up(desktop)      
                 p::before 
                     position: relative
                     width: 0
                     left: -10rem
-                    top: $spacing0
+                    top: $spacing-2
                     margin-right: 0
                     margin-top: 0
 
@@ -193,43 +189,56 @@ body.full-width
             display: none
 
 .hero-program
+    .breadcrumb-nav
+        @include media-breakpoint-up(xl)
+            max-width: columns(8)
+        ol
+            @include media-breakpoint-up(xl)
+                overflow: scroll
     .content
-        display: block
-        @include media-breakpoint-up(desktop)    
-            display: flex
-            align-items: flex-end
-            justify-content: space-between
-            flex-direction: row
-            width: 100%
+        .hero-text
+            display: block
+            @include media-breakpoint-up(desktop)    
+                display: flex
+                align-items: flex-end
+                justify-content: space-between
+                flex-direction: row
+                width: 100%
     &-infos
-        min-width: col(4)
-        width: fit-content
+        width: 100%
+        max-width: fit-content
         @include media-breakpoint-up(desktop)    
-            margin-top: $spacing3
-        
+            margin-left: $grid-gutter
+            margin-top: $spacing-5
+        display: flex
+        flex-direction: column
         &-teachers 
             flex-direction: row
             align-items: center
             justify-content: flex-end
+            flex-direction: row
             &.top
+                position: absolute
+                top: 0
+                right: $spacing-5
                 display: flex
-                padding-top: $spacing1
-                width: fit-content
-                min-width: col(4)
-                float: right
                 justify-content: flex-start
+                height: $spacing-5
+                width: fit-content
                 @include media-breakpoint-down(xl)
                     display: none
             &.bottom
                 display: none
                 @include media-breakpoint-down(xl)
+                    justify-content: flex-start
                     display: flex
+
             ul
                 display: flex
                 li 
                     display: flex
                     flex-direction: column-reverse
-                    padding-left: $spacing1
+                    padding-left: $spacing-3
                     > a
                         width: 70px
                         height: 70px
@@ -252,7 +261,7 @@ body.full-width
         @include media-breakpoint-up(desktop) 
             padding: 0
             margin: 0
-            max-width: 100%
+            width: 100%
 
     .programs-grid
         align-items: stretch
@@ -266,12 +275,12 @@ body.full-width
             flex-direction: column
             margin-bottom: 0px
             border-top: 2px dotted $blue
-            padding: $spacing1 0
+            padding: $spacing-3 0
             @include media-breakpoint-up(desktop) 
                 border-bottom: 2px dotted $color-text
                 border-top: 2px dotted $color-text
                 border-right: 2px dotted $color-text
-                padding: $spacing3
+                padding: $spacing-5
                 @include media-breakpoint-down(xl) 
                     &:nth-child(2n+3), &:nth-child(2n+4)
                         border-top: none
@@ -286,11 +295,11 @@ body.full-width
                 @include h2
                 margin-bottom: 0
                 @include media-breakpoint-up(desktop)
-                    min-height: $spacing5
+                    min-height: $spacing-7
             &::before
                 @include meta
                 content: "Durée: 3h00"
-                margin-bottom: $spacing0
+                margin-bottom: $spacing-2
             .media
                 display: none
             > .program-content
@@ -300,10 +309,10 @@ body.full-width
                 justify-content: space-between
                 div > p
                     @include media-breakpoint-up(desktop)
-                        margin-bottom: $spacing2
+                        margin-bottom: $spacing-4
                 a
                     .more
-                        padding: $spacing0 $spacing1
+                        padding: $spacing-2 $spacing-3
                         width: fit-content
                         border: 2px dotted $color-text
                         border-radius: 45px
@@ -312,4 +321,4 @@ body.full-width
                             background: $blue
                             color: $gold
                         &::after
-                            content: ""            
+                            content: ""

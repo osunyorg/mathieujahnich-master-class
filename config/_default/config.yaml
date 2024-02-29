@@ -22,3 +22,5 @@ params:
         type: loop
         autoHeight: true
         interval: 8000
+  debug:
+     productionUrl: "https://master-class.mathieujahnich.osuny.site/"
