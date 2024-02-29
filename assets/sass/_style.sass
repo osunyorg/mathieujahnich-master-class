@@ -147,7 +147,6 @@ body.full-width
     .taxonomies-persons
         display: none
 
-
 .avatar 
     background-color: $blue
     picture
@@ -156,7 +155,6 @@ body.full-width
         img
             filter: grayscale(1)
             mix-blend-mode: multiply 
-
 
 .programs__section
     main 
@@ -182,6 +180,11 @@ body.full-width
 .event-sidebar
     ul.share > li:last-child
         display: none
+
+.events__page
+    .hero
+        h1 span
+            color: $gold
 
 .pages__section.avis-page
     .toc
@@ -210,6 +213,7 @@ body.full-width
         @include media-breakpoint-up(desktop)    
             margin-left: $grid-gutter
             margin-top: $spacing-5
+            min-width: columns(4)
         display: flex
         flex-direction: column
         &-teachers 
