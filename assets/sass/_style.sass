@@ -255,58 +255,18 @@ body.full-width
             max-width: 100%
 
     .programs-grid
+        align-items: stretch
+        padding-top: 0
+        padding-bottom: 0
         @include in-page-without-sidebar
-            padding-top: 0
-            padding-bottom: 0
             @include grid(2, desktop, 0,0)
             @include grid(3, xl, 0,0)
 
         article
-            display: flex
             flex-direction: column
             margin-bottom: 0px
             border-top: 2px dotted $blue
-            
             padding: $spacing1 0
-            p.title
-                @include h2
-                margin-bottom: 0
-                @include media-breakpoint-up(desktop)
-                    min-height: $spacing5
-            &::before
-                @include meta
-                content: "Durée: 3h00"
-                margin-bottom: $spacing0
-            > div:not(.media)
-                display: flex
-                height: 100%
-                flex-direction: column
-                justify-content: space-between
-                > p
-                    margin-bottom: $spacing0
-                    @include media-breakpoint-up(desktop)
-                        margin-bottom: $spacing1
-                a
-                    background: none
-                    padding: 0px
-                p.more.meta
-                    padding: $spacing0 $spacing1
-                    margin-top: 0px
-                    width: fit-content
-                    border: 2px dotted $color-text
-                    border-radius: 45px
-                    transition: background .3s ease, color .3s ease
-                    &:hover
-                        background: $blue
-                        color: $gold
-                    &::after
-                        content: ""            
-            @include media-breakpoint-up(xl) 
-                &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
-                    border-top: none
-                &:nth-child(3n+3)
-                    border-right: none
-
             @include media-breakpoint-up(desktop) 
                 border-bottom: 2px dotted $color-text
                 border-top: 2px dotted $color-text
@@ -317,3 +277,39 @@ body.full-width
                         border-top: none
                     &:nth-child(2n+2)
                         border-right: none
+            @include media-breakpoint-up(xl) 
+                &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
+                    border-top: none
+                &:nth-child(3n+3)
+                    border-right: none
+            h3
+                @include h2
+                margin-bottom: 0
+                @include media-breakpoint-up(desktop)
+                    min-height: $spacing5
+            &::before
+                @include meta
+                content: "Durée: 3h00"
+                margin-bottom: $spacing0
+            .media
+                display: none
+            > .program-content
+                display: flex
+                height: 100%
+                flex-direction: column
+                justify-content: space-between
+                div > p
+                    @include media-breakpoint-up(desktop)
+                        margin-bottom: $spacing2
+                a
+                    .more
+                        padding: $spacing0 $spacing1
+                        width: fit-content
+                        border: 2px dotted $color-text
+                        border-radius: 45px
+                        transition: background .3s ease, color .3s ease
+                        &:hover
+                            background: $blue
+                            color: $gold
+                        &::after
+                            content: ""            
