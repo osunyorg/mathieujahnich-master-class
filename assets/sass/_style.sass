@@ -207,36 +207,34 @@ body.full-width
                 justify-content: space-between
                 flex-direction: row
                 width: 100%
+
     &-infos
         width: 100%
         max-width: fit-content
-        @include media-breakpoint-up(desktop)    
-            margin-left: $grid-gutter
-            margin-top: $spacing-5
-            min-width: columns(4)
         display: flex
         flex-direction: column
+        @include media-breakpoint-up(desktop)    
+            margin-top: $spacing-5
+            min-width: columns(4)
         &-teachers 
             flex-direction: row
             align-items: center
-            justify-content: flex-end
             flex-direction: row
+            justify-content: space-between
+            height: $spacing-5
+            min-width: columns(4)
             &.top
                 position: absolute
                 top: 0
-                right: $spacing-5
+                right: calc(var(--grid-gutter))
                 display: flex
-                justify-content: flex-start
-                height: $spacing-5
-                width: fit-content
                 @include media-breakpoint-down(xl)
                     display: none
             &.bottom
                 display: none
                 @include media-breakpoint-down(xl)
-                    justify-content: flex-start
                     display: flex
-
+                    margin: $spacing-3 0
             ul
                 display: flex
                 li 
