@@ -46,6 +46,10 @@ header#document-header
                 order: initial
             &-credit, &-legals
                 width: max-content
+                @include media-breakpoint-up(desktop)
+                    text-align: right
+                    float: right
+                
 
 @include media-breakpoint-up(desktop)
     footer#document-footer
