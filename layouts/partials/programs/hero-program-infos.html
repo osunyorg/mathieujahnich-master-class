@@ -1,13 +1,15 @@
 <div class="hero-program-infos">
-        {{- if .teachers -}}
-            {{- partial "programs/hero-programs-teachers.html"           
-            (dict
-            "teachers" .teachers
-            "location" "bottom"
-            ) -}}
-        {{- end -}}
+    {{- if .teachers -}}
+        {{- partial "programs/hero-programs-teachers.html"           
+        (dict
+        "teachers" .teachers
+        "location" "bottom"
+        ) -}}
+    {{- end -}}
+    {{ with .duration }}
         <div class="hero-program-infos-meta">
             <p>Durée</p>
-            <p>3h00</p>
+            <p>{{ . }}</p>
         </div>
+    {{ end }}
 </div>

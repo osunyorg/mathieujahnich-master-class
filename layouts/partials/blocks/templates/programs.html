@@ -21,6 +21,11 @@
               {{- $title := partial "PrepareHTML" $program.Title -}}
               {{- $summary := partial "PrepareHTML" $program.Params.summary -}}
               <article>
+                {{ with $program.Params.duration }}
+                  <div class="duration">
+                    Durée: {{ . }}
+                  </div>
+                {{end}}
                 <div class="program-content">
                   {{ $heading_tag.open }}{{- $title -}}{{ $heading_tag.close }}
                   <div>

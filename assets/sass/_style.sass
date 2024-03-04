@@ -259,6 +259,8 @@ body.full-width
             flex-direction: row
             p
                 @include h4
+                margin-top: 0
+                padding: $spacing-2 0
             p:last-child
                 font-weight: normal
 
@@ -302,14 +304,14 @@ body.full-width
                 margin-bottom: 0
                 @include media-breakpoint-up(desktop)
                     min-height: $spacing-7
-            &::before
-                @include meta
-                content: "Durée: 3h00"
+            .duration
+                @include h4
+                font-weight: normal
                 margin-bottom: $spacing-2
             .media
                 display: none
             > .program-content
-                display: flex
+                display: flex1
                 height: 100%
                 flex-direction: column
                 justify-content: space-between
