@@ -25,7 +25,7 @@ header#document-header
             > h1, > hgroup 
                 width: columns(7)
 .page__home    
-     @include media-breakpoint-up(desktop) 
+    @include media-breakpoint-up(desktop) 
         .content 
             > h1, > hgroup 
                 width: columns(9)
@@ -264,69 +264,78 @@ body.full-width
             p:last-child
                 font-weight: normal
 
-.block-programs
+.block-programs--grid
     .container 
         @include media-breakpoint-up(desktop) 
             padding: 0
             margin: 0
             width: 100%
 
-    .programs-grid
-        align-items: stretch
-        padding-top: 0
-        padding-bottom: 0
-        @include in-page-without-sidebar
-            @include grid(2, desktop, 0,0)
-            @include grid(3, xl, 0,0)
+        .programs-grid 
+            align-items: stretch
+            @include grid(1, false, 0px)
+            @include in-page-without-sidebar
+                @include grid(2, desktop, 0,0)
+                @include grid(3, xl, 0,0)
 
-        article
-            flex-direction: column
-            margin-bottom: 0px
-            border-top: 2px dotted $blue
-            padding: $spacing-3 0
-            @include media-breakpoint-up(desktop) 
-                border-bottom: 2px dotted $color-text
-                border-top: 2px dotted $color-text
-                border-right: 2px dotted $color-text
-                padding: $spacing-5
-                @include media-breakpoint-down(xl) 
-                    &:nth-child(2n+3), &:nth-child(2n+4)
+            article
+                border-top: 2px dotted $blue
+                padding: $spacing-3 0
+                transition: background .3s ease, color .3s ease
+                @include media-breakpoint-up(desktop) 
+                    &:hover
+                        background: $blue
+                        color: $gold  
+                        border-color: $gold
+                        a
+                            color: $gold
+                        .more
+                            border-color: $gold
+                    border-bottom: 2px dotted $color-text
+                    border-top: 2px dotted $color-text
+                    border-right: 2px dotted $color-text
+                    padding: $spacing-5
+                    @include media-breakpoint-down(xl) 
+                        &:nth-child(2n+3), &:nth-child(2n+4)
+                            border-top: none
+                        &:nth-child(2n+2)
+                            border-right: none
+                @include media-breakpoint-up(xl) 
+                    &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
                         border-top: none
-                    &:nth-child(2n+2)
+                    &:nth-child(3n+3)
                         border-right: none
-            @include media-breakpoint-up(xl) 
-                &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
-                    border-top: none
-                &:nth-child(3n+3)
-                    border-right: none
-            h3
-                @include h2
-                margin-bottom: 0
-                @include media-breakpoint-up(desktop)
-                    min-height: $spacing-7
+
             .duration
                 @include h4
                 font-weight: normal
                 margin-bottom: $spacing-2
-            .media
-                display: none
-            > .program-content
-                display: flex1
+
+            .program-content
+                display: flex
                 height: 100%
                 flex-direction: column
                 justify-content: space-between
-                div > p
+
+                [itemprop='name']
+                    @include h2
                     @include media-breakpoint-up(desktop)
-                        margin-bottom: $spacing-4
-                a
-                    .more
-                        padding: $spacing-2 $spacing-3
-                        width: fit-content
-                        border: 2px dotted $color-text
-                        border-radius: 45px
+                        min-height: $spacing-7
+                        
+                .more
+                    padding: $spacing-2 $spacing-3
+                    position: relative
+                    z-index: 2
+                    cursor: pointer
+                    width: fit-content
+                    border: 2px dotted $color-text
+                    border-radius: 45px
+                    @include media-breakpoint-down(desktop)
                         transition: background .3s ease, color .3s ease
                         &:hover
                             background: $blue
                             color: $gold
-                        &::after
-                            content: ""
+                    @include media-breakpoint-up(desktop)
+                        margin-top: $spacing-4
+                    &::after
+                        content: ""
