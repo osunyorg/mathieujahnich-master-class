@@ -25,9 +25,7 @@ header#document-header
     .breadcrumb-nav
         @include media-breakpoint-up(xl)
             max-width: columns(8)
-        ol
-            @include media-breakpoint-up(xl)
-                overflow: scroll
+            
     .content
         .hero-text
             display: block
@@ -59,7 +57,7 @@ header#document-header
             &.top
                 position: absolute
                 top: 0
-                right: calc(var(--grid-gutter))
+                right: $grid-gutter
                 display: flex
                 @include media-breakpoint-down(xl)
                     display: none
