@@ -8,6 +8,7 @@ header#document-header
         text-decoration: underline
         text-decoration-style: dotted
     > a, > a:focus
+        padding: 0.5rem pxToRem(20)
         text-decoration-style: dotted
         text-decoration-thickness: 2px
 
@@ -19,16 +20,86 @@ header#document-header
             text-decoration-thickness: 2px
         + .content
             padding-top: $spacing-5
-    
-    @include media-breakpoint-up(desktop) 
-        .content 
-            > h1, > hgroup 
-                width: columns(7)
+
+.hero-program
+    .breadcrumb-nav
+        @include media-breakpoint-up(xl)
+            max-width: columns(8)
+        ol
+            @include media-breakpoint-up(xl)
+                overflow: scroll
+    .content
+        .hero-text
+            display: block
+            width: columns(11)
+            @include media-breakpoint-up(desktop)    
+                display: flex
+                align-items: flex-end
+                justify-content: space-between
+                flex-direction: row
+                width: 100%
+                h1
+                    width: columns(8)
+
+    &-infos
+        width: 100%
+        max-width: fit-content
+        display: flex
+        flex-direction: column
+        @include media-breakpoint-up(desktop)    
+            margin-top: $spacing-5
+            min-width: columns(4)
+        &-teachers 
+            flex-direction: row
+            align-items: center
+            flex-direction: row
+            justify-content: space-between
+            height: $spacing-5
+            min-width: columns(4)
+            &.top
+                position: absolute
+                top: 0
+                right: calc(var(--grid-gutter))
+                display: flex
+                @include media-breakpoint-down(xl)
+                    display: none
+            &.bottom
+                display: none
+                @include media-breakpoint-down(xl)
+                    display: flex
+                    margin: $spacing-3 0
+            ul
+                display: flex
+                li 
+                    display: flex
+                    flex-direction: column-reverse
+                    padding-left: $spacing-3
+                    > a
+                        width: 70px
+                        height: 70px
+                                
+        &-meta
+            border-color: $gold
+            border-bottom-style: dotted
+            border-bottom-width: 2px
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            flex-direction: row
+            p
+                @include h4
+                margin-top: 0
+                padding: $spacing-2 0
+            p:last-child
+                font-weight: normal
+
 .page__home    
     @include media-breakpoint-up(desktop) 
         .content 
             > h1, > hgroup 
                 width: columns(9)
+        .lead
+            font-size: $quote-size-desktop-short
 
 #document-footer
     .footer-site
@@ -51,10 +122,14 @@ header#document-header
                     float: right
                 
 
+main:not(.page-with-blocks), .programs__section section:last-child .content, .persons__section div.persons:last-child, .persons__page section:last-child
+    padding-bottom: 0
+
 @include media-breakpoint-up(desktop)
     footer#document-footer
         display: flex
         padding-top: $spacing-7
+        margin-top: 100px
         .container
             padding-bottom: 0rem
             + .container
@@ -195,75 +270,6 @@ body.full-width
         &-cta, &-container
             display: none
 
-.hero-program
-    .breadcrumb-nav
-        @include media-breakpoint-up(xl)
-            max-width: columns(8)
-        ol
-            @include media-breakpoint-up(xl)
-                overflow: scroll
-    .content
-        .hero-text
-            display: block
-            @include media-breakpoint-up(desktop)    
-                display: flex
-                align-items: flex-end
-                justify-content: space-between
-                flex-direction: row
-                width: 100%
-
-    &-infos
-        width: 100%
-        max-width: fit-content
-        display: flex
-        flex-direction: column
-        @include media-breakpoint-up(desktop)    
-            margin-top: $spacing-5
-            min-width: columns(4)
-        &-teachers 
-            flex-direction: row
-            align-items: center
-            flex-direction: row
-            justify-content: space-between
-            height: $spacing-5
-            min-width: columns(4)
-            &.top
-                position: absolute
-                top: 0
-                right: calc(var(--grid-gutter))
-                display: flex
-                @include media-breakpoint-down(xl)
-                    display: none
-            &.bottom
-                display: none
-                @include media-breakpoint-down(xl)
-                    display: flex
-                    margin: $spacing-3 0
-            ul
-                display: flex
-                li 
-                    display: flex
-                    flex-direction: column-reverse
-                    padding-left: $spacing-3
-                    > a
-                        width: 70px
-                        height: 70px
-                                
-        &-meta
-            border-color: $gold
-            border-bottom-style: dotted
-            border-bottom-width: 2px
-            display: flex
-            align-items: flex-end
-            justify-content: space-between
-            flex-direction: row
-            p
-                @include h4
-                margin-top: 0
-                padding: $spacing-2 0
-            p:last-child
-                font-weight: normal
-
 .block-programs--grid
     .container 
         @include media-breakpoint-up(desktop) 
@@ -282,15 +288,20 @@ body.full-width
                 border-top: 2px dotted $blue
                 padding: $spacing-3 0
                 transition: background .3s ease, color .3s ease
-                @include media-breakpoint-up(desktop) 
-                    &:hover
+                
+                &:hover
+                    .more
+                        border-color: $gold
+                        background: $blue
+                        color: $gold  
+                    @include media-breakpoint-up(desktop) 
                         background: $blue
                         color: $gold  
                         border-color: $gold
                         a
                             color: $gold
-                        .more
-                            border-color: $gold
+
+                @include media-breakpoint-up(desktop) 
                     border-bottom: 2px dotted $color-text
                     border-top: 2px dotted $color-text
                     border-right: 2px dotted $color-text
@@ -325,16 +336,11 @@ body.full-width
                 .more
                     padding: $spacing-2 $spacing-3
                     position: relative
-                    z-index: 2
-                    cursor: pointer
                     width: fit-content
                     border: 2px dotted $color-text
                     border-radius: 45px
                     @include media-breakpoint-down(desktop)
                         transition: background .3s ease, color .3s ease
-                        &:hover
-                            background: $blue
-                            color: $gold
                     @include media-breakpoint-up(desktop)
                         margin-top: $spacing-4
                     &::after
