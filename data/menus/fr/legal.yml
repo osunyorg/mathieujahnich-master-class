@@ -9,8 +9,8 @@ items:
   target: "/mentions-legales/"
   kind: page
   children: []
-- title: "© 2024 Master Class Communication responsable"
-  target: ''
-  kind: blank
+- title: "© 2024 MJ Conseil"
+  target: www.mathieu-jahnich.fr
+  kind: url
   children: []
 
