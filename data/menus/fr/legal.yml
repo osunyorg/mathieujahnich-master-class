@@ -10,7 +10,7 @@ items:
   kind: page
   children: []
 - title: "© 2024 MJ Conseil"
-  target: www.mathieu-jahnich.fr
+  target: http://www.mathieu-jahnich.fr/
   kind: url
   children: []
 
