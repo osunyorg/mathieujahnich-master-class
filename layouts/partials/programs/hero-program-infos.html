@@ -6,6 +6,37 @@
         "location" "bottom"
         ) -}}
     {{- end -}}
+    
+    {{ with .slug }}
+        {{ $eventpage := slice}} 
+        {{ with site.GetPage (printf "/events") }} 
+            {{ range .Pages }} 
+                {{ if in .Params.events_categories $.slug }}
+                    {{ $eventpage = $eventpage | append . }}
+                {{ end }}
+            {{ end }}
+            {{ if ( gt ( len $eventpage ) 0 ) }}
+                {{$next := index $eventpage 0}}
+                {{ range $k, $v := $eventpage }}
+                    {{ with .Params.dates }}
+                        {{ if and (eq .status "future") (not .archive) }}
+                            {{ if lt .from.day $next.Params.dates.from.day}}
+                                $next := $v
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+                {{with $next}}
+                <div class="hero-program-infos-meta">
+                    <p>Date</p>
+                    <p>{{ .Params.dates.computed.long }}</p>
+                </div>  
+                {{end}}
+            {{ end }}
+
+        {{ end }}
+    {{ end }}
+
     {{ with .duration }}
         <div class="hero-program-infos-meta">
             <p>Durée</p>
