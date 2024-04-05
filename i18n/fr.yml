@@ -6,3 +6,5 @@ programs:
   teachers: Intervenant·es
   contacts: Contact
   apply: S'inscrire
+persons:
+  programs: Formations
