@@ -5,10 +5,6 @@ items:
   target: "/programme/"
   kind: page
   children: []
-- title: Sessions
-  target: "/sessions/"
-  kind: page
-  children: []
 - title: Intervenant·es
   target: "/intervenant-es/"
   kind: page
