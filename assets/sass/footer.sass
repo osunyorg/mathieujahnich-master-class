@@ -1,0 +1,30 @@
+footer#document-footer
+    margin-top: 100px
+    @include media-breakpoint-up(desktop)
+        display: flex
+        padding-top: $spacing-7
+        .container
+            padding-bottom: 0rem
+            + .container
+                width: max-content
+                align-items: flex-start
+                padding-top: 0
+                justify-content: flex-end
+    .footer-site
+        display: none
+    .container + .container
+        flex-direction: column
+        align-content: flex-end
+        align-items: start
+        .footer
+            &-legals
+            display: block
+            text-align: left
+            &-social
+                display: none
+                order: initial
+            &-credit, &-legals
+                width: max-content
+                @include media-breakpoint-up(desktop)
+                    text-align: right
+                    float: right

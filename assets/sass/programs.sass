@@ -1,0 +1,99 @@
+.programs__section
+    main 
+        div.essential-container
+            display: none
+
+        #accessibilite 
+            p::before
+                display: block
+                float: left
+                margin-right: $spacing-3
+                margin-top: $spacing-3
+                content: url("/assets/images/disability_symbols.svg")
+            @include media-breakpoint-up(desktop)      
+                p::before 
+                    position: relative
+                    width: 0
+                    left: -10rem
+                    top: $spacing-2
+                    margin-right: 0
+                    margin-top: 0
+    .document-content section .content
+        grid-row-gap: 0
+        .blocks 
+            .heading h2 
+                @include h3
+            .block
+                margin-bottom: 0
+            @include media-breakpoint-up(desktop)
+                margin-top: $spacing-6
+
+.hero-program
+    .breadcrumb-nav
+        @include media-breakpoint-up(xl)
+            max-width: columns(8)
+
+    .content
+        .hero-text
+            display: block
+            width: columns(11)
+            @include media-breakpoint-up(desktop)    
+                display: flex
+                align-items: flex-end
+                justify-content: space-between
+                flex-direction: row
+                width: 100%
+                h1
+                    width: columns(8)
+
+    &-infos
+        width: 100%
+        max-width: fit-content
+        display: flex
+        flex-direction: column
+        @include media-breakpoint-up(desktop)    
+            margin-top: $spacing-5
+            min-width: columns(4)
+        &-teachers 
+            flex-direction: row
+            align-items: center
+            flex-direction: row
+            justify-content: space-between
+            height: $spacing-5
+            min-width: columns(4)
+            &.top
+                position: absolute
+                top: 0
+                right: var(--grid-gutter)
+                display: flex
+                @include media-breakpoint-down(xl)
+                    display: none
+            &.bottom
+                display: none
+                @include media-breakpoint-down(xl)
+                    display: flex
+                    margin: $spacing-3 0
+            ul
+                display: flex
+                li 
+                    display: flex
+                    flex-direction: column-reverse
+                    padding-left: $spacing-3
+                    > a
+                        width: 70px
+                        height: 70px
+                                
+        &-meta
+            border-color: $gold
+            border-bottom-style: dotted
+            border-bottom-width: 2px
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            flex-direction: row
+            p
+                @include h4
+                margin-top: 0
+                padding: $spacing-2 0
+            p:last-child
+                font-weight: normal

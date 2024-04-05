@@ -1,0 +1,148 @@
+.block-call_to_action
+    @include in-page-without-sidebar
+        .block-content 
+            padding-top: 0
+            padding-bottom: 0
+            .call_to_action 
+                padding-top: 0
+                padding-bottom: 0
+                .actions
+                    grid-column: 1/13
+                    padding-top: 0
+                    padding-bottom: 0
+                    > a 
+                        @include meta
+                        padding: $spacing-2 $spacing-3
+                        border: 2px dotted $color-text
+                        border-radius: 45px
+                        font-size: $body-size
+
+.block-testimonials
+    blockquote
+        p
+            position: relative
+            
+    @include media-breakpoint-up(desktop)
+        @include in-page-without-sidebar
+            figure
+                margin-bottom: 0
+                padding-right: 0
+
+        figcaption
+            position: relative
+            float: right
+            top: calc(-100%)
+            text-align: right
+            &::before
+                content: "”"
+                font-size: pxToRem(142)
+                position: relative
+                top: 0
+                right: pxToRem(52)
+        blockquote
+            width: columns(9)
+            height: 100%
+    .splide
+        button
+            margin-top: $spacing-4
+            @include media-breakpoint-up(desktop)
+                margin-top: 0
+        &__arrow
+            background: transparent
+            color: $color-text
+            border: 2px dotted $color-text
+            border-radius: 45px
+            width: $spacing-5
+            height:  $spacing-5
+            font-weight: 700
+            font-size: $body-size-desktop
+            position: initial
+            transition: background .3s ease, color .3s ease
+            &:hover
+                background: $blue
+                color: $gold
+                cursor: pointer
+            &--prev
+                margin-right: $spacing-3
+        &__toggle
+            display: none
+        .splide__pagination
+            display: none
+            .is-active i
+                display: none
+
+.block-programs--grid
+    .container 
+        @include media-breakpoint-up(desktop) 
+            padding: 0
+            margin: 0
+            width: 100%
+
+        .programs-grid 
+            align-items: stretch
+            @include grid(1, false, 0px)
+            @include in-page-without-sidebar
+                @include grid(2, desktop, 0,0)
+                @include grid(3, xl, 0,0)
+
+            article
+                border-top: 2px dotted $blue
+                padding: $spacing-3 0
+                transition: background .3s ease, color .3s ease
+                
+                &:hover
+                    .more
+                        border-color: $gold
+                        background: $blue
+                        color: $gold  
+                    @include media-breakpoint-up(desktop) 
+                        background: $blue
+                        color: $gold  
+                        border-color: $gold
+                        a
+                            color: $gold
+
+                @include media-breakpoint-up(desktop) 
+                    border-bottom: 2px dotted $color-text
+                    border-top: 2px dotted $color-text
+                    border-right: 2px dotted $color-text
+                    padding: $spacing-5
+                    @include media-breakpoint-down(xl) 
+                        &:nth-child(2n+3), &:nth-child(2n+4)
+                            border-top: none
+                        &:nth-child(2n+2)
+                            border-right: none
+                @include media-breakpoint-up(xl) 
+                    &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
+                        border-top: none
+                    &:nth-child(3n+3)
+                        border-right: none
+
+            .duration
+                @include h4
+                font-weight: normal
+                margin-bottom: $spacing-2
+
+            .program-content
+                display: flex
+                height: 100%
+                flex-direction: column
+                justify-content: space-between
+
+                [itemprop='name']
+                    @include h2
+                    @include media-breakpoint-up(desktop)
+                        min-height: $spacing-7
+                        
+                .more
+                    padding: $spacing-2 $spacing-3
+                    position: relative
+                    width: fit-content
+                    border: 2px dotted $color-text
+                    border-radius: 45px
+                    @include media-breakpoint-down(desktop)
+                        transition: background .3s ease, color .3s ease
+                    @include media-breakpoint-up(desktop)
+                        margin-top: $spacing-4
+                    &::after
+                        content: ""

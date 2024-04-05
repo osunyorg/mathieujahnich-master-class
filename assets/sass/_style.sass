@@ -21,75 +21,7 @@ header#document-header
         + .content
             padding-top: $spacing-5
 
-.hero-program
-    .breadcrumb-nav
-        @include media-breakpoint-up(xl)
-            max-width: columns(8)
 
-    .content
-        .hero-text
-            display: block
-            width: columns(11)
-            @include media-breakpoint-up(desktop)    
-                display: flex
-                align-items: flex-end
-                justify-content: space-between
-                flex-direction: row
-                width: 100%
-                h1
-                    width: columns(8)
-
-    &-infos
-        width: 100%
-        max-width: fit-content
-        display: flex
-        flex-direction: column
-        @include media-breakpoint-up(desktop)    
-            margin-top: $spacing-5
-            min-width: columns(4)
-        &-teachers 
-            flex-direction: row
-            align-items: center
-            flex-direction: row
-            justify-content: space-between
-            height: $spacing-5
-            min-width: columns(4)
-            &.top
-                position: absolute
-                top: 0
-                right: var(--grid-gutter)
-                display: flex
-                @include media-breakpoint-down(xl)
-                    display: none
-            &.bottom
-                display: none
-                @include media-breakpoint-down(xl)
-                    display: flex
-                    margin: $spacing-3 0
-            ul
-                display: flex
-                li 
-                    display: flex
-                    flex-direction: column-reverse
-                    padding-left: $spacing-3
-                    > a
-                        width: 70px
-                        height: 70px
-                                
-        &-meta
-            border-color: $gold
-            border-bottom-style: dotted
-            border-bottom-width: 2px
-            display: flex
-            align-items: flex-end
-            justify-content: space-between
-            flex-direction: row
-            p
-                @include h4
-                margin-top: 0
-                padding: $spacing-2 0
-            p:last-child
-                font-weight: normal
 
 .page__home    
     @include media-breakpoint-up(desktop) 
@@ -99,173 +31,29 @@ header#document-header
         .lead
             font-size: $quote-size-desktop-short
 
-#document-footer
-    .footer-site
-        display: none
-    .container + .container
-        flex-direction: column
-        align-content: flex-end
-        align-items: start
-        .footer
-            &-legals
-            display: block
-            text-align: left
-            &-social
-                display: none
-                order: initial
-            &-credit, &-legals
-                width: max-content
-                @include media-breakpoint-up(desktop)
-                    text-align: right
-                    float: right
-                
-
 main:not(.page-with-blocks), .programs__section section:last-child .content, .persons__section div.persons:last-child, .persons__page section:last-child
     padding-bottom: 0
 
 .events__section .archive-link 
     display: none
     
-footer#document-footer
-    margin-top: 100px
-    @include media-breakpoint-up(desktop)
-        display: flex
-        padding-top: $spacing-7
-        .container
-            padding-bottom: 0rem
-            + .container
-                width: max-content
-                align-items: flex-start
-                padding-top: 0
-                justify-content: flex-end
-
-body.full-width
-    .block-call_to_action
-        .block-content 
-            padding-top: 0
-            padding-bottom: 0
-            .call_to_action 
-                .actions
-                    grid-column: 1/13
-                    padding-top: 0
-                    padding-bottom: 0
-                    > a 
-                        @include meta
-                        padding: $spacing-2 $spacing-3
-                    
-.block-call_to_action
-    .block-content 
-        padding-top: 0
-        padding-bottom: 0
-        .call_to_action 
-            padding-top: 0
-            padding-bottom: 0
-            .actions
-                grid-column: 1/13
-                padding-top: 0
-                padding-bottom: 0
-                > a 
-                    border: 2px dotted $color-text
-                    border-radius: 45px
-                    font-size: $body-size
-
-.block-testimonials
-    blockquote
-        p
-            position: relative
-            
-    @include media-breakpoint-up(desktop)
-        @include in-page-without-sidebar
-            figure
-                margin-bottom: 0
-                padding-right: 0
-
-        figcaption
-            position: relative
-            float: right
-            top: calc(-100%)
-            text-align: right
-            &::before
-                content: "”"
-                font-size: pxToRem(142)
-                position: relative
-                top: 0
-                right: pxToRem(52)
-        blockquote
-            width: columns(9)
-            height: 100%
-    .splide
-        button
-            margin-top: $spacing-4
-            @include media-breakpoint-up(desktop)
-                margin-top: 0
-        &__arrow
-            background: transparent
-            color: $color-text
-            border: 2px dotted $color-text
-            border-radius: 45px
-            width: $spacing-5
-            height:  $spacing-5
-            font-weight: 700
-            font-size: $body-size-desktop
-            position: initial
-            transition: background .3s ease, color .3s ease
-            &:hover
-                background: $blue
-                color: $gold
-                cursor: pointer
-            &--prev
-                margin-right: $spacing-3
-        &__toggle
-            display: none
-        .splide__pagination
-            display: none
-            .is-active i
-                display: none
                 
 .persons__page, .persons__section,.hero-program
     .taxonomies-persons
         display: none
 
-.avatar 
+.avatar, .persons__page .hero--with-image figure 
     background-color: $blue
+    border-radius: 50%
     picture
         mix-blend-mode: screen
         background-color: $gold
         img
+            border-radius: 50%
             filter: grayscale(1)
             mix-blend-mode: multiply 
-
-.programs__section
-    main 
-        div.essential-container
-            display: none
-
-        #accessibilite 
-            p::before
-                display: block
-                float: left
-                margin-right: $spacing-3
-                margin-top: $spacing-3
-                content: url("/assets/images/disability_symbols.svg")
-            @include media-breakpoint-up(desktop)      
-                p::before 
-                    position: relative
-                    width: 0
-                    left: -10rem
-                    top: $spacing-2
-                    margin-right: 0
-                    margin-top: 0
-    .document-content section .content
-        grid-row-gap: 0;
-        .blocks 
-            .heading h2 
-                @include h3
-            .block
-                margin-bottom: 0
-            @include media-breakpoint-up(desktop)
-                margin-top: $spacing-6
-
+    figcaption
+        display: none
 
 .event-sidebar
     ul.share > li:last-child
@@ -288,79 +76,3 @@ body.full-width
     .toc
         &-cta, &-container
             display: none
-
-.block-programs--grid
-    .container 
-        @include media-breakpoint-up(desktop) 
-            padding: 0
-            margin: 0
-            width: 100%
-
-        .programs-grid 
-            align-items: stretch
-            @include grid(1, false, 0px)
-            @include in-page-without-sidebar
-                @include grid(2, desktop, 0,0)
-                @include grid(3, xl, 0,0)
-
-            article
-                border-top: 2px dotted $blue
-                padding: $spacing-3 0
-                transition: background .3s ease, color .3s ease
-                
-                &:hover
-                    .more
-                        border-color: $gold
-                        background: $blue
-                        color: $gold  
-                    @include media-breakpoint-up(desktop) 
-                        background: $blue
-                        color: $gold  
-                        border-color: $gold
-                        a
-                            color: $gold
-
-                @include media-breakpoint-up(desktop) 
-                    border-bottom: 2px dotted $color-text
-                    border-top: 2px dotted $color-text
-                    border-right: 2px dotted $color-text
-                    padding: $spacing-5
-                    @include media-breakpoint-down(xl) 
-                        &:nth-child(2n+3), &:nth-child(2n+4)
-                            border-top: none
-                        &:nth-child(2n+2)
-                            border-right: none
-                @include media-breakpoint-up(xl) 
-                    &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
-                        border-top: none
-                    &:nth-child(3n+3)
-                        border-right: none
-
-            .duration
-                @include h4
-                font-weight: normal
-                margin-bottom: $spacing-2
-
-            .program-content
-                display: flex
-                height: 100%
-                flex-direction: column
-                justify-content: space-between
-
-                [itemprop='name']
-                    @include h2
-                    @include media-breakpoint-up(desktop)
-                        min-height: $spacing-7
-                        
-                .more
-                    padding: $spacing-2 $spacing-3
-                    position: relative
-                    width: fit-content
-                    border: 2px dotted $color-text
-                    border-radius: 45px
-                    @include media-breakpoint-down(desktop)
-                        transition: background .3s ease, color .3s ease
-                    @include media-breakpoint-up(desktop)
-                        margin-top: $spacing-4
-                    &::after
-                        content: ""

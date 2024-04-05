@@ -23,4 +23,8 @@ params:
         autoHeight: true
         interval: 8000
   debug:
-     productionUrl: "https://master-class.mathieujahnich.osuny.site/"
+    productionUrl: "https://master-class.mathieujahnich.osuny.site/"
+  image_sizes:
+    design_system:
+      lightbox:
+        disabled: true
