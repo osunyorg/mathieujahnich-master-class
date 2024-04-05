@@ -1,6 +1,10 @@
 title: >-
   Master Class
 default:
+  image:
+    id: 5936e28c-99d4-419c-90dd-7069d5ac5fc2
+  shared_image:
+    id: eb35cb93-3bbd-4ece-a1dc-ad4406a3b81d
 social:
   email: >-
     formation@mathieu-jahnich.fr
