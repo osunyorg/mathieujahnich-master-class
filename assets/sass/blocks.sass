@@ -1,4 +1,13 @@
 .block-call_to_action
+    .block-content 
+        .call_to_action 
+            .actions
+                > a 
+                    @include meta
+                    padding: $spacing-2 $spacing-3
+                    border: 2px dotted $color-text
+                    border-radius: 45px
+                    font-size: $body-size
     @include in-page-without-sidebar
         .block-content 
             padding-top: 0
@@ -10,12 +19,6 @@
                     grid-column: 1/13
                     padding-top: 0
                     padding-bottom: 0
-                    > a 
-                        @include meta
-                        padding: $spacing-2 $spacing-3
-                        border: 2px dotted $color-text
-                        border-radius: 45px
-                        font-size: $body-size
 
 .block-testimonials
     blockquote
