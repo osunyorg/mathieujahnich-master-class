@@ -3,6 +3,7 @@ paginate: 18
 enableRobotsTXT: true
 removePathAccents: true
 params:
+  plausible: master-class-communication-responsable.fr
   logo:
     footer: "/assets/images/logof.svg"
   summary:
@@ -23,7 +24,7 @@ params:
         autoHeight: true
         interval: 8000
   debug:
-    productionUrl: "https://master-class.mathieujahnich.osuny.site/"
+    productionUrl: "https://www.master-class-communication-responsable.fr"
   image_sizes:
     design_system:
       lightbox:
