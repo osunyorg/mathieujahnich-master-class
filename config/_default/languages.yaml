@@ -16,6 +16,7 @@ fr:
     programs: /programme/:slug/
     publications: /publications/:year-:slug/
     persons: /intervenant-es/:slug/
+    persons_categories: /intervenant-es/:slug/
     researchers: /intervenant-es/:slug/publications/
     teachers: /intervenant-es/:slug/programs/
   taxonomies:
@@ -24,6 +25,8 @@ fr:
     diploma: diplomas
     events_category: events_categories
     location: locations
+    organizations_category: organizations_categories
+    persons_category: persons_categories
     posts_category: posts_categories
     projects_category: projects_categories
     researcher: researchers
