@@ -14,7 +14,6 @@ fr:
     events: /sessions/:year-:month-:day-:slug/
     events_categories: /sessions/:slug/
     programs: /programme/:slug/
-    publications: /publications/:year-:slug/
     persons: /intervenant-es/:slug/
     persons_categories: /intervenant-es/:slug/
     researchers: /intervenant-es/:slug/publications/
