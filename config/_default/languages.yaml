@@ -15,7 +15,7 @@ fr:
     events_categories: /sessions/:slug/
     programs: /programme/:slug/
     persons: /intervenant-es/:slug/
-    persons_categories: /intervenant-es/:slug/
+    persons_categories: /intervenant-es/categories/:slug/
     researchers: /intervenant-es/:slug/publications/
     teachers: /intervenant-es/:slug/programs/
   taxonomies:
