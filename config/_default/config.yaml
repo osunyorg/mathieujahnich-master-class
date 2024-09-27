@@ -15,14 +15,10 @@ params:
       quantity: 3
   blocks:
     testimonials:
-      splide:
-        arrows: true
+      carousel:
+        pagination: true
         autoplay: true
-        pauseOnHover: false
-        pauseOnFocus: true
-        type: loop
-        autoHeight: true
-        interval: 8000
+        autoplayinterval: 8000
   debug:
     productionUrl: "https://www.master-class-communication-responsable.fr"
   image_sizes:
