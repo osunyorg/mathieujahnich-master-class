@@ -30,51 +30,45 @@
             @include media-breakpoint-up(desktop)
                 margin-top: $spacing-6
 
-.hero-program
-    .breadcrumb-nav
-        @include media-breakpoint-up(xl)
-            max-width: columns(8)
+    .hero
+        .container
+            position: relative
+        .breadcrumb-nav
+            @include media-breakpoint-up(xl)
+                max-width: columns(8)
 
-    .content
-        .hero-text
-            display: block
-            width: columns(11)
-            @include media-breakpoint-up(desktop)    
-                display: flex
-                align-items: flex-end
-                justify-content: space-between
-                flex-direction: row
-                width: 100%
-                h1
-                    width: columns(8)
+        .content
+            .hero-text
+                display: block
+                width: columns(12)
+                @include media-breakpoint-up(desktop)    
+                    align-items: flex-end
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    max-width: columns(8)
 
-    &-infos
-        width: 100%
-        max-width: fit-content
+    .hero-program-infos
         display: flex
         flex-direction: column
+        max-width: fit-content
+        min-width: columns(4)
+        width: 100%
         @include media-breakpoint-up(desktop)    
             margin-top: $spacing-5
-            min-width: columns(4)
         &-teachers 
-            flex-direction: row
             align-items: center
             flex-direction: row
-            justify-content: space-between
+            flex-direction: row
             height: $spacing-5
+            justify-content: space-between
             min-width: columns(4)
-            &.top
+            @include media-breakpoint-up(xl)
+                margin-top: 0
                 position: absolute
                 top: 0
-                right: var(--grid-gutter)
-                display: flex
-                @include media-breakpoint-down(xl)
-                    display: none
-            &.bottom
-                display: none
-                @include media-breakpoint-down(xl)
-                    display: flex
-                    margin: $spacing-3 0
+            display: flex
+            margin: $spacing-3 0
             ul
                 display: flex
                 li 

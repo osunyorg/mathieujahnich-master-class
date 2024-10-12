@@ -1,43 +1,61 @@
 <div class="hero-program-infos">
-    {{- if .teachers -}}
-        {{- partial "programs/hero-programs-teachers.html"           
-        (dict
-        "teachers" .teachers
-        "location" "bottom"
-        ) -}}
-    {{- end -}}
+  {{- if .Params.teachers -}}
+    <div class="hero-program-infos-teachers">
+      {{ $title := i18n "programs.teachers" -}}
+      <h4>{{ $title }}</h4>
+      <ul class="hero-list-persons">
+        {{- range .Params.teachers -}}
+          {{- $person := site.GetPage (printf "/persons/%s" .) -}}
+          {{- with $person -}}
+          <li>
+            <a class="avatar" href="{{ .Permalink }}">
+              {{- if .Params.image }}
+                {{ partial "commons/image.html"
+                (dict
+                "alt" .Title
+                "image" .Params.image
+                "sizes" site.Params.image_sizes.sections.persons.item
+                )}}
+              {{ end -}}
+            </a>
+          </li>
+          {{- end -}}
+        {{- end -}}
+      </ul>
+    </div>
+  {{- end -}}
     
-    {{ with .slug }}
-        {{ $eventpage := slice}} 
-        {{ with site.GetPage (printf "/events") }} 
-            {{ range .Pages }} 
-                {{ if in .Params.events_categories $.slug }}
-                    {{ $eventpage = $eventpage | append . }}
-                {{ end }}
-            {{ end }}
-            {{ if ( gt ( len $eventpage ) 0 ) }}
-                {{$next := index $eventpage 0}}
-                {{ range $k, $v := $eventpage }}
-                    {{ with .Params.dates }}
-                        {{ if and (eq .status "future") (not .archive) }}
-                            {{ if lt .from.day $next.Params.dates.from.day}}
-                                $next := $v
-                            {{ end }}
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-                {{with $next}}
-                <div class="hero-program-infos-meta">
-                    <p>Date</p>
-                    <p>{{ .Params.dates.computed.long }}</p>
-                </div>  
-                {{end}}
-            {{ end }}
-
-        {{ end }}
+  {{ with .Params.hugo.slug }}
+      {{ $eventpage := slice}} 
+      {{ $slug := . }}
+      {{ with site.GetPage (printf "/events") }} 
+          {{ range .Pages }} 
+              {{ if in .Params.events_categories $slug }}
+                  {{ $eventpage = $eventpage | append . }}
+              {{ end }}
+          {{ end }}
+          {{ if ( gt ( len $eventpage ) 0 ) }}
+              {{$next := index $eventpage 0}}
+              {{ range $k, $v := $eventpage }}
+                  {{ with .Params.dates }}
+                      {{ if and (eq .status "future") (not .archive) }}
+                          {{ if lt .from.day $next.Params.dates.from.day}}
+                              $next := $v
+                          {{ end }}
+                      {{ end }}
+                  {{ end }}
+              {{ end }}
+              {{with $next}}
+              <div class="hero-program-infos-meta">
+                  <p>Date</p>
+                  <p>{{ .Params.dates.computed.long }}</p>
+              </div>  
+              {{end}}
+          {{ end }}
+      {{ end }}
     {{ end }}
 
-    {{ with .duration }}
+    {{ with .Params.duration }}
         <div class="hero-program-infos-meta">
             <p>Durée</p>
             <p>{{ . }}</p>

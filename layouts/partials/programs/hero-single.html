@@ -1,7 +1,14 @@
 {{- $title := or .Params.header_text .Title -}}
-{{ partial "programs/myhero.html"
-      (dict
-        "title" $title
-        "context" .
-        "hero_complement" "programs/essential.html"
-      )}}
+
+{{- $hero_options := (dict
+  "title" $title
+  "context" .
+  "hero_complement" "programs/hero-essential.html"
+) }}
+
+{{- if .Params.teachers -}}
+  {{- $hero_content_complement := "programs/hero-program-infos.html" -}}
+  {{- $hero_options = merge $hero_options (dict "hero_content_complement" $hero_content_complement) -}}
+{{- end -}}
+
+{{ partial "header/hero.html" $hero_options }}
