@@ -24,27 +24,50 @@
     blockquote
         p
             position: relative
-            
+    .carousel
+        flex-direction: column
+        .counter
+            display: none
+        button
+            background: transparent
+            border-radius: 45px
+            border: 2px dotted $color-text
+            color: $color-text
+            font-size: $body-size-desktop
+            font-weight: 700
+            margin-top: $spacing-4
+            position: initial
+            transition: background .3s ease, color .3s ease
+            width: 
+            &:hover
+                background: $blue
+                color: $gold
+                cursor: pointer
+            @include media-breakpoint-up(desktop)
+                margin-top: 0
+        .carousel__arrows
+            margin-left: 0
+            .arrow-prev
+                margin-right: $spacing-3
+
     @include media-breakpoint-up(desktop)
         @include in-page-without-sidebar
             figure
                 margin-bottom: 0
                 padding-right: 0
-
-        figcaption
+        figure
             position: relative
-            float: right
-            top: calc(-100%)
+        figcaption
+            position: absolute
+            top: 0
+            right: 0
             text-align: right
             &::before
                 content: "”"
                 font-size: pxToRem(142)
-                position: relative
-                top: 0
                 right: pxToRem(52)
         blockquote
             width: columns(9)
-            height: 100%
 
 .block-programs--grid
     .container 

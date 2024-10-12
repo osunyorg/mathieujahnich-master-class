@@ -16,8 +16,10 @@ params:
   blocks:
     testimonials:
       carousel:
-        pagination: true
-        autoplay: true
+        arrows: true
+        pagination: false
+        # autoplay temporary disabled while waiting for fix
+        autoplay: false 
         autoplayinterval: 8000
   debug:
     productionUrl: "https://www.master-class-communication-responsable.fr"
