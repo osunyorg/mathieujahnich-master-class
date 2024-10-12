@@ -54,11 +54,11 @@
             width: 100%
 
         .programs-grid 
-            align-items: stretch
-            @include grid(1, false, 0px)
+            row-gap: 0
             @include in-page-without-sidebar
                 @include grid(2, desktop, 0,0)
                 @include grid(3, xl, 0,0)
+                align-items: stretch
 
             article
                 border-top: 2px dotted $blue
@@ -106,8 +106,6 @@
 
                 [itemprop='name']
                     @include h2
-                    @include media-breakpoint-up(desktop)
-                        min-height: $spacing-7
                         
                 .more
                     padding: $spacing-2 $spacing-3
@@ -118,7 +116,7 @@
                     @include media-breakpoint-down(desktop)
                         transition: background .3s ease, color .3s ease
                     @include media-breakpoint-up(desktop)
-                        margin-top: $spacing-4
+                        margin: $spacing-4 0
                     &::after
                         content: ""
             .media 
