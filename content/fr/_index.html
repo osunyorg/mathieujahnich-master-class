@@ -55,13 +55,15 @@ header_cta:
   target: "/a-propos"
   external: false
 contents_reading_time:
-  seconds: 31
+  seconds: 32
   text: >-
     1 minute
 contents:
   - kind: block
     template: call_to_action
     title: >-
+      
+    slug: >-
       
     ranks:
       self: false
@@ -88,15 +90,23 @@ contents:
 
 
 
-  - kind: heading
+  - kind: block
+    template: title
     title: >-
       Les formations
-    slug: "les-formations"
-    position: 1
-    rank: 2
+    slug: >-
+      les-formations
+    ranks:
+      self: 2
+    data:
+      layout: classic
+
+
   - kind: block
     template: programs
     title: >-
+      
+    slug: >-
       
     ranks:
       self: false
@@ -116,17 +126,24 @@ contents:
         - path: "/master-class-sur-mesure/"
 
 
-
-  - kind: heading
+  - kind: block
+    template: title
     title: >-
       Avis de participant·es
-    slug: "avis-de-participant-es"
-    position: 2
-    rank: 2
+    slug: >-
+      avis-de-participant-es
+    ranks:
+      self: 2
+    data:
+      layout: classic
+
+
   - kind: block
     template: testimonials
     title: >-
       Avis de participant·es
+    slug: >-
+      avis-de-participant-es
     ranks:
       self: 3
     data:
@@ -169,7 +186,6 @@ contents:
 
           job: >-
             Janvier 2024
-
 
 
 
