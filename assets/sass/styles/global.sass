@@ -1,16 +1,19 @@
 header#document-header 
-    border-color: $gold
+    border-color: $color-gold
     border-bottom-style: dotted
     border-bottom-width: 2px
 
-.menu .nav-level-1 > li 
-    a.active
-        text-decoration: underline
-        text-decoration-style: dotted
-    > a, > a:focus
-        padding: 0.5rem pxToRem(20)
-        text-decoration-style: dotted
-        text-decoration-thickness: 2px
+.menu 
+    .nav-level-1 
+        > li 
+            a.active
+                text-decoration: underline
+                text-decoration-style: dotted
+            > a, 
+            > a:focus
+                padding: 0.5rem pxToRem(20)
+                text-decoration-style: dotted
+                text-decoration-thickness: 2px
 
 body
     ul
@@ -20,39 +23,31 @@ body
 .hero 
     .breadcrumb-nav 
         margin-top: $spacing-4
+        + .content
+            padding-top: $spacing-5
         a:hover
             text-decoration-style: dotted
             text-decoration-thickness: 2px
-        + .content
-            padding-top: $spacing-5
 
-
-
-.page__home    
-    @include media-breakpoint-up(desktop) 
-        .content 
-            > h1, > hgroup 
-                width: columns(9)
-        .lead
-            font-size: $quote-size-desktop-short
-
-main:not(.page-with-blocks), .programs__section section:last-child .content, .persons__section div.persons:last-child, .persons__page section:last-child
+main:not(.page-with-blocks),
+.programs__section section:last-child .content,
+.persons__section div.persons:last-child,
+.persons__page section:last-child
     padding-bottom: 0
-
-.events__section .archive-link 
-    display: none
-    
                 
-.persons__page, .persons__section,.hero-program
+.persons__page, 
+.persons__section,
+.hero-program
     .taxonomies-persons
         display: none
 
-.avatar, .persons__page .hero--with-image figure 
-    background-color: $blue
+.avatar,
+.persons__page .hero--with-image figure 
+    background-color: $color-blue
     border-radius: 50%
     picture
+        background-color: $color-gold
         mix-blend-mode: screen
-        background-color: $gold
         img
             border-radius: 50%
             filter: grayscale(1)
@@ -65,22 +60,20 @@ main:not(.page-with-blocks), .programs__section section:last-child .content, .pe
         display: none
     ul.events-categories
         *
-            color: $blue
-            text-decoration-color: $blue
+            color: $color-blue
+            text-decoration-color: $color-blue
             &:hover
-                text-decoration-color: $blue
-                color: $white
-                //transition: none
+                color: $color-white
+                text-decoration-color: $color-blue
 
 .events__page
     .hero
-        h1 span
-            color: $gold
+        h1
+            span
+                color: $color-gold
 
 .pages__section.avis-page
     .toc
-        &-cta, &-container
+        &-cta,
+        &-container
             display: none
-
-.logo-qualiopi
-    border-radius: 6px

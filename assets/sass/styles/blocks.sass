@@ -1,147 +1,145 @@
-.block-call_to_action
-    .block-content 
-        .call_to_action 
-            .actions
-                > a 
-                    @include meta
-                    padding: $spacing-2 $spacing-3
-                    border: 2px dotted $color-text
-                    border-radius: 45px
-                    font-size: $body-size
-    @include in-page-without-sidebar
+.block
+    &-call_to_action
         .block-content 
-            padding-top: 0
-            padding-bottom: 0
             .call_to_action 
-                padding-top: 0
-                padding-bottom: 0
                 .actions
-                    grid-column: 1/13
-                    padding-top: 0
-                    padding-bottom: 0
-
-.block-testimonials
-    blockquote
-        p
-            position: relative
-    .carousel
-        flex-direction: column
-        .counter
-            display: none
-        button
-            background: transparent
-            border-radius: 45px
-            border: 2px dotted $color-text
-            color: $color-text
-            font-size: $body-size-desktop
-            font-weight: 700
-            margin-top: $spacing-4
-            position: initial
-            transition: background .3s ease, color .3s ease
-            width: 
-            &:hover
-                background: $blue
-                color: $gold
-                cursor: pointer
-            @include media-breakpoint-up(desktop)
-                margin-top: 0
-        .carousel__arrows
-            margin-left: 0
-            .arrow-prev
-                margin-right: $spacing-3
-
-    @include media-breakpoint-up(desktop)
+                    > a 
+                        background: none
+                        border: 2px dotted $color-text
+                        border-radius: 45px
+                        color: $color-blue
+                        padding: $spacing-2 $spacing-3
         @include in-page-without-sidebar
-            figure
-                margin-bottom: 0
-                padding-right: 0
-        figure
-            position: relative
-        figcaption
-            position: absolute
-            top: 0
-            right: 0
-            text-align: right
-            p
-                width: columns(2)
-            &::before
-                content: "”"
-                font-size: pxToRem(142)
+            .block-content 
+                padding-bottom: 0
+                padding-top: 0
+                .call_to_action
+                    > div
+                        display: block 
+
+    &-testimonials
         blockquote
-            width: columns(9)
-
-.block-programs--grid
-    .container 
-        @include media-breakpoint-up(desktop) 
-            padding: 0
-            margin: 0
-            width: 100%
-
-        .programs-grid 
-            row-gap: 0
-            @include in-page-without-sidebar
-                @include grid(2, desktop, 0,0)
-                @include grid(3, xl, 0,0)
-                align-items: stretch
-
-            article
-                border-top: 2px dotted $blue
-                padding: $spacing-3 0
-                transition: background .3s ease, color .3s ease
-                
-                &:hover
-                    .more
-                        border-color: $gold
-                        background: $blue
-                        color: $gold  
-                    @include media-breakpoint-up(desktop) 
-                        background: $blue
-                        color: $gold  
-                        border-color: $gold
-                        a
-                            color: $gold
-
-                @include media-breakpoint-up(desktop) 
-                    border-bottom: 2px dotted $color-text
-                    border-top: 2px dotted $color-text
-                    border-right: 2px dotted $color-text
-                    padding: $spacing-5
-                    @include media-breakpoint-down(xl) 
-                        &:nth-child(2n+3), &:nth-child(2n+4)
-                            border-top: none
-                        &:nth-child(2n+2)
-                            border-right: none
-                @include media-breakpoint-up(xl) 
-                    &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
-                        border-top: none
-                    &:nth-child(3n+3)
-                        border-right: none
-
-            .duration
-                @include h4
-                font-weight: normal
-                margin-bottom: $spacing-2
-
-            .program-content
-                display: flex
-                height: 100%
-                flex-direction: column
-                justify-content: space-between
-
-                [itemprop='name']
-                    @include h2
-                        
-                .more
-                    padding: $spacing-2 $spacing-3
-                    position: relative
-                    width: fit-content
-                    border: 2px dotted $color-text
-                    border-radius: 45px
-                    @include media-breakpoint-down(desktop)
-                        transition: background .3s ease, color .3s ease
-                    @include media-breakpoint-up(desktop)
-                        margin: $spacing-4 0
-                    &::after
-                        content: ""
-            .media 
+            p
+                position: relative
+        .carousel
+            flex-direction: column
+            .counter
                 display: none
+            button
+                background: transparent
+                border-radius: 45px
+                border: 2px dotted $color-text
+                color: $color-text
+                font-size: $body-size-desktop
+                font-weight: 700
+                margin-top: $spacing-4
+                position: initial
+                transition: background .3s ease, color .3s ease
+                width: 
+                &:hover
+                    background: $color-blue
+                    color: $color-gold
+                    cursor: pointer
+                @include media-breakpoint-up(desktop)
+                    margin-top: 0
+            .carousel__arrows
+                .arrow-prev
+                    margin-left: 0
+                    margin-right: $spacing-3
+
+        @include media-breakpoint-up(desktop)
+            @include in-page-without-sidebar
+                figure
+                    margin-bottom: 0
+                    padding-right: 0
+            figure
+                position: relative
+                padding-left: 0 !important
+            figcaption
+                position: absolute
+                top: 0
+                right: 0
+                text-align: right
+                p
+                    width: columns(2)
+                &::before
+                    content: "”"
+                    font-size: pxToRem(142)
+            blockquote
+                width: columns(9)
+
+    &-programs--grid
+        .container 
+            @include media-breakpoint-up(desktop) 
+                padding: 0
+                margin: 0
+                width: 100%
+
+            .programs-grid 
+                row-gap: 0
+                @include in-page-without-sidebar
+                    @include grid(2, desktop, 0,0)
+                    @include grid(3, xl, 0,0)
+                    align-items: stretch
+
+                article
+                    border-top: 2px dotted $color-blue
+                    padding: $spacing-3 0
+                    transition: background .3s ease, color .3s ease
+                    
+                    &:hover
+                        .more
+                            border-color: $color-gold
+                            background: $color-blue
+                            color: $color-gold  
+                        @include media-breakpoint-up(desktop) 
+                            background: $color-blue
+                            color: $color-gold  
+                            border-color: $color-gold
+                            a
+                                color: $color-gold
+
+                    @include media-breakpoint-up(desktop) 
+                        border-bottom: 2px dotted $color-text
+                        border-top: 2px dotted $color-text
+                        border-right: 2px dotted $color-text
+                        padding: $spacing-5
+                        @include media-breakpoint-down(xl) 
+                            &:nth-child(2n+3), &:nth-child(2n+4)
+                                border-top: none
+                            &:nth-child(2n+2)
+                                border-right: none
+                    @include media-breakpoint-up(xl) 
+                        &:nth-child(3n+4), &:nth-child(3n+5), &:nth-child(3n+6)
+                            border-top: none
+                        &:nth-child(3n+3)
+                            border-right: none
+
+                .duration
+                    @include h4
+                    font-weight: normal
+                    margin-bottom: $spacing-2
+
+                .program-content
+                    display: flex
+                    height: 100%
+                    flex-direction: column
+                    justify-content: space-between
+
+                    [itemprop='name']
+                        @include h2
+                            
+                    .more
+                        padding: $spacing-2 $spacing-3
+                        position: relative
+                        width: fit-content
+                        border: 2px dotted $color-text
+                        border-radius: 45px
+                        @include media-breakpoint-down(desktop)
+                            transition: background .3s ease, color .3s ease
+                        @include media-breakpoint-up(desktop)
+                            margin: $spacing-4 0
+                        &::after
+                            content: ""
+                .media 
+                    display: none

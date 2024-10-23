@@ -4,26 +4,20 @@ footer#document-footer
         display: flex
         padding-top: $spacing-7
         .container
-            padding-bottom: 0rem
+            padding-bottom: 0
             + .container
-                width: max-content
                 align-items: flex-start
-                padding-top: 0
                 justify-content: flex-end
+                padding-top: 0
+                width: max-content
     .footer-site
         display: none
     .container + .container
-        flex-direction: column
-        align-content: flex-end
-        align-items: start
         .footer
-            &-legals
-            display: block
-            text-align: left
             &-social
                 display: none
-                order: initial
-            &-credit, &-legals
+            &-credit,
+            &-legals
                 width: max-content
                 @include media-breakpoint-up(desktop)
                     text-align: right

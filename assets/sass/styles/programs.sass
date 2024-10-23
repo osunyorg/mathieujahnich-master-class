@@ -1,3 +1,6 @@
+.logo-qualiopi
+    border-radius: 6px
+
 .programs__section
     main 
         div.essential-container
@@ -5,30 +8,31 @@
 
         #accessibilite 
             p::before
+                content: url("/assets/images/disability_symbols.svg")
                 display: block
                 float: left
                 margin-right: $spacing-3
                 margin-top: $spacing-3
-                content: url("/assets/images/disability_symbols.svg")
             @include media-breakpoint-up(desktop)      
                 p::before 
-                    position: relative
-                    width: 0
                     left: -10rem
-                    top: $spacing-2
                     margin-right: 0
                     margin-top: 0
+                    position: relative
+                    top: $spacing-2
+                    width: 0
     .document-content section .content
         grid-row-gap: 0
         .featured-image
             display: none
         .blocks 
-            .heading h2 
-                @include h3
-            .block
-                margin-bottom: 0
             @include media-breakpoint-up(desktop)
                 margin-top: $spacing-6
+            .heading
+                h2
+                    @include h3
+            .block
+                margin-bottom: 0
 
     .hero
         .container
@@ -58,17 +62,17 @@
             margin-top: $spacing-5
         &-teachers 
             align-items: center
+            display: flex
             flex-direction: row
             flex-direction: row
             height: $spacing-5
             justify-content: space-between
+            margin: $spacing-3 0
             min-width: columns(4)
             @include media-breakpoint-up(xl)
                 margin-top: 0
                 position: absolute
                 top: 0
-            display: flex
-            margin: $spacing-3 0
             ul
                 display: flex
                 li 
@@ -76,17 +80,17 @@
                     flex-direction: column-reverse
                     padding-left: $spacing-3
                     > a
-                        width: 70px
                         height: 70px
+                        width: 70px
                                 
         &-meta
-            border-color: $gold
+            align-items: flex-end
+            border-color: $color-gold
             border-bottom-style: dotted
             border-bottom-width: 2px
             display: flex
-            align-items: flex-end
-            justify-content: space-between
             flex-direction: row
+            justify-content: space-between
             p
                 @include h4
                 margin-top: 0
