@@ -1,39 +1,11 @@
-header#document-header 
-    border-color: $color-gold
-    border-bottom-style: dotted
-    border-bottom-width: 2px
-
-.menu 
-    .nav-level-1 
-        > li 
-            a.active
-                text-decoration: underline
-                text-decoration-style: dotted
-            > a, 
-            > a:focus
-                padding: 0.5rem pxToRem(20)
-                text-decoration-style: dotted
-                text-decoration-thickness: 2px
-
-body
-    ul
-        padding-left: 1em
-        li
-            list-style-position: outside
 .hero 
     .breadcrumb-nav 
         margin-top: $spacing-4
         + .content
             padding-top: $spacing-5
-        a:hover
+        a
             text-decoration-style: dotted
             text-decoration-thickness: 2px
-
-main:not(.page-with-blocks),
-.programs__section section:last-child .content,
-.persons__section div.persons:last-child,
-.persons__page section:last-child
-    padding-bottom: 0
                 
 .persons__page, 
 .persons__section,
@@ -55,24 +27,7 @@ main:not(.page-with-blocks),
     figcaption
         display: none
 
-.event-sidebar
-    ul.share > li:last-child
-        display: none
-    ul.events-categories
-        *
-            color: $color-blue
-            text-decoration-color: $color-blue
-            &:hover
-                color: $color-white
-                text-decoration-color: $color-blue
-
-.events__page
-    .hero
-        h1
-            span
-                color: $color-gold
-
-.pages__section.avis-page
+.page-hide-toc
     .toc
         &-cta,
         &-container

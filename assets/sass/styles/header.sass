@@ -1,0 +1,16 @@
+header#document-header 
+    border-color: $color-gold
+    border-bottom-style: dotted
+    border-bottom-width: 2px
+    .menu 
+        .nav-level-1 
+            > li 
+                a
+                    @include media-breakpoint-up(desktop)
+                        font-size: pxToRem(21)
+                    @include media-breakpoint-down(desktop)
+                        text-align: right
+                        padding-top: 0
+                    &.active
+                        text-decoration: underline
+                        text-decoration-style: dotted
