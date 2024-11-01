@@ -8,5 +8,28 @@ country: "France"
 phone: ""
 url: ""
 contact_details:
+  postal_address:
+    data:
+      address: >-
+        31 rue Auguste Barbier
+      address_additional: >-
+        
+      zipcode: >-
+        77300
+      city: >-
+        Fontainebleau
+      country: >-
+        name: >-
+          France
+        alpha2: >-
+          FR
+        alpha3: >-
+          FRA
+      country: >-
+        France
+    text: >-
+      31 rue Auguste Barbier 77300 Fontainebleau FRANCE
+    html: >-
+      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"> <span itemprop="streetAddress">31 rue Auguste Barbier</span> <span itemprop="postalCode">77300</span> <span itemprop="addressLocality">Fontainebleau</span> <span itemprop="addressCountry">FRANCE</span></address>
 roles: []
 ---
