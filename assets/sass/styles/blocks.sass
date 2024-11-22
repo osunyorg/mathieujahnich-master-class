@@ -21,31 +21,26 @@
         blockquote
             p
                 position: relative
-        .carousel
-            flex-direction: column
-            .counter
-                display: none
-            button
-                background: transparent
-                border-radius: 45px
-                border: 2px dotted $color-text
-                color: $color-text
-                font-size: $body-size-desktop
-                font-weight: 700
+        .slider
+            &-arrows
+                gap: $spacing-3
                 margin-top: $spacing-4
-                position: initial
-                transition: background .3s ease, color .3s ease
-                width: 
-                &:hover
-                    background: $color-blue
-                    color: $color-gold
-                    cursor: pointer
-                @include media-breakpoint-up(desktop)
-                    margin-top: 0
-            .carousel__arrows
-                .arrow-prev
+                .slider-arrow-previous
                     margin-left: 0
-                    margin-right: $spacing-3
+                button
+                    background: transparent
+                    border-radius: 45px
+                    border: 2px dotted $color-text
+                    color: $color-text
+                    font-size: $body-size-desktop
+                    font-weight: 700
+                    position: initial
+                    transition: background .3s ease, color .3s ease
+                    width: 
+                    &:hover
+                        background: $color-blue
+                        color: $color-gold
+                        cursor: pointer
 
         @include media-breakpoint-up(desktop)
             @include in-page-without-sidebar
