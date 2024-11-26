@@ -5,16 +5,20 @@ items:
   target: "/programme/"
   kind: page
   children: []
+  file: content/fr/programs/_index.html
 - title: Intervenant·es
   target: "/intervenant-es/"
   kind: page
   children: []
+  file: content/fr/persons/_index.html
 - title: Avis
   target: "/avis/"
   kind: page
   children: []
+  file: content/fr/pages/avis/_index.html
 - title: À propos
   target: "/a-propos/"
   kind: page
   children: []
+  file: content/fr/pages/a-propos/_index.html
 
