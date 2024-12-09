@@ -7,9 +7,14 @@ fr:
   languageCode: fr
   languageName: Français
   params:
-    social:
-      email: >-
-        formation@mathieu-jahnich.fr
+    contact_details:
+      emails:
+        email:
+          label: >-
+            formation@mathieu-jahnich.fr
+          value: >-
+            mailto:formation@mathieu-jahnich.fr
+
   permalinks:
     events: /sessions/:year-:month-:day-:slug/
     events_categories: /sessions/:slug/
