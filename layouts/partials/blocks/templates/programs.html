@@ -1,7 +1,7 @@
 {{- $block := .block -}}
 {{- $block_class := partial "GetBlockClass" .block -}}
 {{ $heading := .heading | default "h3" }}
-{{ $heading_tag := (dict 
+{{ $heading_tag := (dict
     "open" ((printf "<%s itemprop='name'>" $heading) | safeHTML)
     "close" ((printf "</%s>" $heading) | safeHTML)
     ) }}
@@ -19,7 +19,7 @@
 
           <div class="programs-grid">
             {{- range .programs -}}
-              {{ $program := site.GetPage (printf "/programs%s" .path) }}
+              {{ $program := site.GetPage .path }}
               {{ $title := $program.Title | safeHTML }}
               <article itemscope itemtype="https://schema.org/EducationalOccupationalProgram">
                 {{ with $program.Params.duration }}
@@ -37,7 +37,7 @@
                       {{ with  $program.Params.summary | safeHTML}}
                         <p itemprop="abstract">{{ . }}</p>
                       {{ end }}
-    
+
                       <p class="more meta" aria-hidden="true">{{- i18n "commons.more" -}}</p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
           <ol class="programs">
             {{- range .programs -}}
               <li>
-                {{ $program := site.GetPage (printf "/programs%s" .path) }}
+                {{ $program := site.GetPage .path }}
                 {{- $title := partial "PrepareHTML" $program.Title -}}
                 <a href="{{ $program.Permalink }}" title="{{ safeHTML (i18n "commons.more_aria" (dict "Title" $title)) }}">
                   {{- $title -}}
