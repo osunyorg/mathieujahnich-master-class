@@ -1,18 +1,6 @@
 theme: osuny
-paginate: 18
-enableRobotsTXT: true
-removePathAccents: true
+_merge: deep
 params:
-  plausible: master-class-communication-responsable.fr
-  logo:
-    footer: "/assets/images/logof.svg"
-  summary:
-    position: content
-  search:
-    active: false
-  programs:
-    related_posts:
-      quantity: 3
   blocks:
     testimonials:
       slider:
@@ -21,7 +9,20 @@ params:
         pagination: false
   debug:
     productionUrl: "https://www.master-class-communication-responsable.fr"
+  home:
+    head:
+      title: site
   image_sizes:
     design_system:
       lightbox:
         disabled: true
+  logo:
+    footer: "/assets/images/logof.svg"
+  plausible: master-class-communication-responsable.fr
+  programs:
+    related_posts:
+      quantity: 3
+  search:
+    active: false
+  summary:
+    position: content
