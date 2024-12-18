@@ -4,15 +4,18 @@ items:
 - title: Contact
   target: mailto:formation@mathieu-jahnich.fr
   kind: url
+  new_tab: false
   children: []
 - title: Mentions légales
   target: "/mentions-legales/"
   kind: page
+  new_tab: false
   children: []
   path: "/pages/mentions-legales"
   file: content/fr/pages/mentions-legales/_index.html
 - title: "© 2024 MJ Conseil"
   target: http://www.mathieu-jahnich.fr/
   kind: url
+  new_tab: true
   children: []
 

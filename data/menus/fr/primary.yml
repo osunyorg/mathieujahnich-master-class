@@ -4,24 +4,28 @@ items:
 - title: Programme
   target: "/programme/"
   kind: page
+  new_tab: false
   children: []
   path: "/programs"
   file: content/fr/programs/_index.html
 - title: Intervenant·es
   target: "/intervenant-es/"
   kind: page
+  new_tab: false
   children: []
   path: "/persons"
   file: content/fr/persons/_index.html
 - title: Avis
   target: "/avis/"
   kind: page
+  new_tab: false
   children: []
   path: "/pages/avis"
   file: content/fr/pages/avis/_index.html
 - title: À propos
   target: "/a-propos/"
   kind: page
+  new_tab: false
   children: []
   path: "/pages/a-propos"
   file: content/fr/pages/a-propos/_index.html
