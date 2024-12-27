@@ -14,3 +14,17 @@
         h1
             span
                 color: $color-gold
+
+.events_categories__term
+    .taxonomy-categories--grid
+        @include grid(2, md)
+        @include grid(3, xxl)
+        @include media-breakpoint-down(desktop)
+            li + li
+                margin-top: $spacing-3
+        .category-title
+            a
+                @include icon(arrow-right-line, after, true)
+                @include hover-translate-icon(after)
+        .media
+            display: none
