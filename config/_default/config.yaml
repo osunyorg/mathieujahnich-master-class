@@ -19,6 +19,12 @@ params:
   logo:
     footer: "/assets/images/logof.svg"
   plausible: master-class-communication-responsable.fr
+  events:
+    share_links: # Optional
+      enabled: true
+      facebook: true
+      linkedin: true
+      twitter: false
   programs:
     related_posts:
       quantity: 3
