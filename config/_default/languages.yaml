@@ -18,6 +18,7 @@ fr:
   permalinks:
     events: /sessions/:year-:month-:day-:slug/
     events_categories: /sessions/:slug/
+    pages_categories: /:slug/
     programs: /programme/:slug/
     persons: /intervenant-es/:slug/
     persons_categories: /intervenant-es/categories/:slug/
@@ -30,6 +31,7 @@ fr:
     events_category: events_categories
     location: locations
     organizations_category: organizations_categories
+    pages_category: pages_categories
     persons_category: persons_categories
     posts_category: posts_categories
     projects_category: projects_categories
