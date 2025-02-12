@@ -2,6 +2,11 @@
 
 baseURL: https://www.master-class-communication-responsable.fr
 
+## OSUNY
+osuny:
+  website:
+    id: a1a407e0-e5ae-4a46-b26d-b9119b2f926b
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
