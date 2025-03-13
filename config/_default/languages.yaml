@@ -6,6 +6,7 @@ fr:
   contentDir: content/fr
   languageCode: fr
   languageName: Français
+  buildFuture: true
   params:
     contact_details:
       emails:
@@ -16,7 +17,8 @@ fr:
             mailto:formation@mathieu-jahnich.fr
 
   permalinks:
-    events: /sessions/:year-:month-:day-:slug/
+    events: /sessions/:year/:slug/
+    exhibitions: /expositions/:year-:month-:day-:slug/
     events_categories: /sessions/:slug/
     pages_categories: /:slug/
     programs_categories: /programme/categories/:slug/
