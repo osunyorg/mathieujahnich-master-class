@@ -1,5 +1,12 @@
+about:
+  label: Master Class
 default:
   image:
     id: 5936e28c-99d4-419c-90dd-7069d5ac5fc2
   shared_image:
     id: 057aae59-ef8c-4648-a94b-cadf06e667b0
+contents_reading_time:
+  seconds: 0
+  text: >-
+    moins d'une minute
+contents:
