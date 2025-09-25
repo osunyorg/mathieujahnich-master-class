@@ -56,7 +56,10 @@
           </section>
 
         </div>
-        {{- partial "contents/list.html" . }}
+        {{ partial "contents/list.html" (dict
+            "context" .
+            "contents" .Params.contents
+          ) }}
       </div>
     </div>
 </section>
