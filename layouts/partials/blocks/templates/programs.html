@@ -43,13 +43,11 @@
                 </div>
 
                 {{- if $program.Params.image -}}
-                  <div class="media">
-                    {{- partial "commons/image.html"
-                        (dict
-                          "image"    $program.Params.image
-                          "sizes"    site.Params.image_sizes.blocks.programs
-                        ) -}}
-                  </div>
+                  {{ partial "programs/partials/program/media.html" (dict 
+                    "image" $program.Params.image
+                    "layout" "list"
+                    "type" "programs"
+                  ) }}
                 {{- end -}}
 
               </article>
