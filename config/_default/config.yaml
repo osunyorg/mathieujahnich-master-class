@@ -12,10 +12,9 @@ params:
   home:
     head:
       title: site
-  image_sizes:
-    design_system:
-      lightbox:
-        disabled: true
+  components:
+    lightbox:
+      disabled: true
   logo:
     footer: "/assets/images/logof.svg"
   plausible: master-class-communication-responsable.fr
