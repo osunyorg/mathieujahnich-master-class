@@ -7,6 +7,11 @@ osuny:
   website:
     id: a1a407e0-e5ae-4a46-b26d-b9119b2f926b
 
+## PARAMS
+params:
+  _merge: deep
+  plausible: "master-class-communication-responsable.fr"
+
 ## LANGUAGE
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
