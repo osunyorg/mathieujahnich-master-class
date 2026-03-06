@@ -1,0 +1,25 @@
+{{/*  Cette override sert à mettre les blocs après les informations administratives  */}}
+
+<section id="{{ anchorize (i18n "programs.toc.presentation") }}">
+  <div class="container">
+    <div class="content">
+      <h2>{{ i18n "programs.toc.presentation" }}</h2>
+
+      {{ if or .Params.image .Params.presentation .Params.objectives .Pages }}
+        <div>
+          {{ partial "programs/single/core/presentation/image.html" . }}
+          {{ partial "programs/single/core/presentation/rich-text.html" . }}
+          {{ partial "programs/single/core/presentation/objectives.html" . }}
+          {{ partial "programs/single/core/presentation/children.html" . }}
+        </div>
+      {{ end }}
+
+      {{ partial "programs/single/core/presentation/administrative-information.html" . }}
+
+      {{ partial "contents/list.html" (dict
+        "context" .
+        "contents" .Params.contents
+      ) }}
+    </div>
+  </div>
+</section>
