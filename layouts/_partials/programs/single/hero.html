@@ -3,12 +3,8 @@
 {{- $hero_options := (dict
   "title" $title
   "context" .
-  "hero_complement" "programs/single/hero/essential.html"
+  "hero_complement" ( partial "programs/single/hero/essential.html" . )
+  "hero_content_complement" ( partial "programs/single/custom/hero-program-infos.html" . )
 ) }}
-
-{{- if .Params.teachers -}}
-  {{- $hero_content_complement := "programs/hero-program-infos.html" -}}
-  {{- $hero_options = merge $hero_options (dict "hero_content_complement" $hero_content_complement) -}}
-{{- end -}}
 
 {{ partial "header/hero.html" $hero_options }}
