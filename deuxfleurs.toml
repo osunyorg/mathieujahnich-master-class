@@ -15,334 +15,334 @@ for = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.webp"]
 Cache-Control = "max-age=31536000, no-transform, public"
 
 [[redirects]]
-from = "/equipe/intervenantes/"
+from = "/equipe/intervenantes/index.html"
 to = "/intervenant-es/equipe-pedagogique/"
 
 [[redirects]]
-from = "/2024/04/"
+from = "/2024/04/index.html"
 to = "/sessions/2024/04/"
 
 [[redirects]]
-from = "/2025/01/"
+from = "/2025/01/index.html"
 to = "/sessions/2025/01/"
 
 [[redirects]]
-from = "/intervenantes/thierry-libaert/"
+from = "/intervenantes/thierry-libaert/index.html"
 to = "/intervenant-es/thierry-libaert/"
 
 [[redirects]]
-from = "/2024/10/"
+from = "/2024/10/index.html"
 to = "/sessions/2024/10/"
 
 [[redirects]]
-from = "/sessions/master-class-sur-mesure/"
+from = "/sessions/master-class-sur-mesure/index.html"
 to = "/sessions/offre-de-formation/master-class-sur-mesure/"
 
 [[redirects]]
-from = "/2025/11/"
+from = "/2025/11/index.html"
 to = "/sessions/2025/11/"
 
 [[redirects]]
-from = "/2024/03/"
+from = "/2024/03/index.html"
 to = "/sessions/2024/03/"
 
 [[redirects]]
-from = "/equipe/clementine-baldon/"
+from = "/equipe/clementine-baldon/index.html"
 to = "/intervenant-es/clementine-baldon/"
 
 [[redirects]]
-from = "/sessions/2025-03-31-communication-responsable-piloter/"
+from = "/sessions/2025-03-31-communication-responsable-piloter/index.html"
 to = "/sessions/2025/communication-responsable-piloter/"
 
 [[redirects]]
-from = "/sessions/2024-10-17-communication-responsable-niveau-2/"
+from = "/sessions/2024-10-17-communication-responsable-niveau-2/index.html"
 to = "/sessions/2025/communication-responsable-piloter/"
 
 [[redirects]]
-from = "/2025/03/"
+from = "/2025/03/index.html"
 to = "/sessions/2025/03/"
 
 [[redirects]]
-from = "/sessions/master-class-greenwashing-session-equipes-juridiques/"
+from = "/sessions/master-class-greenwashing-session-equipes-juridiques/index.html"
 to = "/sessions/offre-de-formation/master-class-greenwashing-session-equipes-juridiques/"
 
 [[redirects]]
-from = "/2024/11/"
+from = "/2024/11/index.html"
 to = "/sessions/2024/11/"
 
 [[redirects]]
-from = "/sessions/2025-02-04-communication-responsable-progresser/"
+from = "/sessions/2025-02-04-communication-responsable-progresser/index.html"
 to = "/sessions/2025/communication-responsable-progresser/"
 
 [[redirects]]
-from = "/2024/08/"
+from = "/2024/08/index.html"
 to = "/sessions/2024/08/"
 
 [[redirects]]
-from = "/equipe/equipe-de-recherche/"
+from = "/equipe/equipe-de-recherche/index.html"
 to = "/intervenant-es/equipe-de-recherche/"
 
 [[redirects]]
-from = "/intervenantes/mathieu-jahnich/"
+from = "/intervenantes/mathieu-jahnich/index.html"
 to = "/intervenant-es/mathieu-jahnich/"
 
 [[redirects]]
-from = "/2025/08/"
+from = "/2025/08/index.html"
 to = "/sessions/2025/08/"
 
 [[redirects]]
-from = "/2024/06/"
+from = "/2024/06/index.html"
 to = "/sessions/2024/06/"
 
 [[redirects]]
-from = "/sessions/master-class-communication-responsable-niveau-2/"
+from = "/sessions/master-class-communication-responsable-niveau-2/index.html"
 to = "/sessions/offre-de-formation/master-class-communication-responsable-niveau-2/"
 
 [[redirects]]
-from = "/offre-de-formation/master-class-greenwashing-session-equipes-juridiques/"
+from = "/offre-de-formation/master-class-greenwashing-session-equipes-juridiques/index.html"
 to = "/sessions/offre-de-formation/master-class-greenwashing-session-equipes-juridiques/"
 
 [[redirects]]
-from = "/intervenantes/equipe-pedagogique/"
+from = "/intervenantes/equipe-pedagogique/index.html"
 to = "/intervenant-es/equipe-pedagogique/"
 
 [[redirects]]
-from = "/programme/greenwashing-session-equipes-juridiques/"
+from = "/programme/greenwashing-session-equipes-juridiques/index.html"
 to = "/programme/master-class-greenwashing/"
 
 [[redirects]]
-from = "/agenda/archives/"
+from = "/agenda/archives/index.html"
 to = "/sessions/archives/"
 
 [[redirects]]
-from = "/equipe/mathieu-jahnich/"
+from = "/equipe/mathieu-jahnich/index.html"
 to = "/intervenant-es/mathieu-jahnich/"
 
 [[redirects]]
-from = "/sessions/2024-11-26-greenwashing-session-pour-les-equipes-juridiques-1/"
+from = "/sessions/2024-11-26-greenwashing-session-pour-les-equipes-juridiques-1/index.html"
 to = "/sessions/2025/greenwashing/"
 
 [[redirects]]
-from = "/2025/06/"
+from = "/2025/06/index.html"
 to = "/sessions/2025/06/"
 
 [[redirects]]
-from = "/equipe/clementine-baldon/programs/"
+from = "/equipe/clementine-baldon/programs/index.html"
 to = "/intervenant-es/clementine-baldon/programs/"
 
 [[redirects]]
-from = "/2024/01/"
+from = "/2024/01/index.html"
 to = "/sessions/2024/01/"
 
 [[redirects]]
-from = "/equipe/mathieu-jahnich/programs/"
+from = "/equipe/mathieu-jahnich/programs/index.html"
 to = "/intervenant-es/mathieu-jahnich/programs/"
 
 [[redirects]]
-from = "/intervenantes/"
+from = "/intervenantes/index.html"
 to = "/intervenant-es/equipe-pedagogique/"
 
 [[redirects]]
-from = "/intervenantes/equipe-editoriale/"
+from = "/intervenantes/equipe-editoriale/index.html"
 to = "/intervenant-es/equipe-editoriale/"
 
 [[redirects]]
-from = "/sessions/2025-03-11-communication-responsable-piloter/"
+from = "/sessions/2025-03-11-communication-responsable-piloter/index.html"
 to = "/sessions/2025/communication-responsable-piloter/"
 
 [[redirects]]
-from = "/actualites/offre-de-formation/master-class-communication-responsable-niveau-1/formation-2/"
+from = "/actualites/offre-de-formation/master-class-communication-responsable-niveau-1/formation-2/index.html"
 to = "/actualites/offre-de-formation/formation-2/"
 
 [[redirects]]
-from = "/programme/master-class-greenwashing-session-equipes-juridiques/"
+from = "/programme/master-class-greenwashing-session-equipes-juridiques/index.html"
 to = "/programme/master-class-greenwashing/"
 
 [[redirects]]
-from = "/formations/master-class-communication-responsable-niveau-1/"
+from = "/formations/master-class-communication-responsable-niveau-1/index.html"
 to = "/programme/master-class-communication-responsable-session-progresser/"
 
 [[redirects]]
-from = "/sessions/master-class-greenwashing-session-equipes-communication-et-marketing/"
+from = "/sessions/master-class-greenwashing-session-equipes-communication-et-marketing/index.html"
 to = "/sessions/offre-de-formation/master-class-greenwashing-session-equipes-communication-et-marketing/"
 
 [[redirects]]
-from = "/equipe/"
+from = "/equipe/index.html"
 to = "/intervenant-es/equipe-pedagogique/"
 
 [[redirects]]
-from = "/sessions/2024/"
+from = "/sessions/2024/index.html"
 to = "/2024/"
 
 [[redirects]]
-from = "/intervenantes/equipe-administrative/"
+from = "/intervenantes/equipe-administrative/index.html"
 to = "/intervenant-es/equipe-administrative/"
 
 [[redirects]]
-from = "/2025/09/"
+from = "/2025/09/index.html"
 to = "/sessions/2025/09/"
 
 [[redirects]]
-from = "/sessions/2025-04-29-communication-responsable-progresser/"
+from = "/sessions/2025-04-29-communication-responsable-progresser/index.html"
 to = "/sessions/2025/communication-responsable-progresser/"
 
 [[redirects]]
-from = "/equipe/equipe-administrative/"
+from = "/equipe/equipe-administrative/index.html"
 to = "/intervenant-es/equipe-administrative/"
 
 [[redirects]]
-from = "/sessions/2025/"
+from = "/sessions/2025/index.html"
 to = "/2025/"
 
 [[redirects]]
-from = "/equipe/thierry-libaert/"
+from = "/equipe/thierry-libaert/index.html"
 to = "/intervenant-es/thierry-libaert/"
 
 [[redirects]]
-from = "/formations/"
+from = "/formations/index.html"
 to = "/programme/"
 
 [[redirects]]
-from = "/2024/07/"
+from = "/2024/07/index.html"
 to = "/sessions/2024/07/"
 
 [[redirects]]
-from = "/2025/04/"
+from = "/2025/04/index.html"
 to = "/sessions/2025/04/"
 
 [[redirects]]
-from = "/offre-de-formation/master-class-communication-responsable-niveau-2/"
+from = "/offre-de-formation/master-class-communication-responsable-niveau-2/index.html"
 to = "/sessions/offre-de-formation/master-class-communication-responsable-niveau-2/"
 
 [[redirects]]
-from = "/intervenant-es/intervenantes/"
+from = "/intervenant-es/intervenantes/index.html"
 to = "/intervenant-es/equipe-pedagogique/"
 
 [[redirects]]
-from = "/sessions/2024-11-26-greenwashing/"
+from = "/sessions/2024-11-26-greenwashing/index.html"
 to = "/sessions/2025/greenwashing/"
 
 [[redirects]]
-from = "/intervenantes/equipe-de-recherche/"
+from = "/intervenantes/equipe-de-recherche/index.html"
 to = "/intervenant-es/equipe-de-recherche/"
 
 [[redirects]]
-from = "/sessions/2024-01-29-greenwashing-session-pour-les-equipes-juridiques/"
+from = "/sessions/2024-01-29-greenwashing-session-pour-les-equipes-juridiques/index.html"
 to = "/sessions/2024-06-20-greenwashing-session-pour-les-equipes-juridiques/"
 
 [[redirects]]
-from = "/equipe/equipe-pedagogique/"
+from = "/equipe/equipe-pedagogique/index.html"
 to = "/intervenant-es/equipe-pedagogique/"
 
 [[redirects]]
-from = "/2025/12/"
+from = "/2025/12/index.html"
 to = "/sessions/2025/12/"
 
 [[redirects]]
-from = "/equipe/thierry-libaert/publications/"
+from = "/equipe/thierry-libaert/publications/index.html"
 to = "/intervenant-es/thierry-libaert/publications/"
 
 [[redirects]]
-from = "/programme/formation-2/"
+from = "/programme/formation-2/index.html"
 to = "/programme/master-class-communication-responsable-session-piloter/"
 
 [[redirects]]
-from = "/equipe/thierry-libaert/programs/"
+from = "/equipe/thierry-libaert/programs/index.html"
 to = "/intervenant-es/thierry-libaert/programs/"
 
 [[redirects]]
-from = "/offre-de-formation/master-class-communication-responsable-niveau-1/"
+from = "/offre-de-formation/master-class-communication-responsable-niveau-1/index.html"
 to = "/sessions/offre-de-formation/master-class-communication-responsable-niveau-1/"
 
 [[redirects]]
-from = "/sessions/master-class-communication-responsable-niveau-1/"
+from = "/sessions/master-class-communication-responsable-niveau-1/index.html"
 to = "/sessions/offre-de-formation/master-class-communication-responsable-niveau-1/"
 
 [[redirects]]
-from = "/2025/07/"
+from = "/2025/07/index.html"
 to = "/sessions/2025/07/"
 
 [[redirects]]
-from = "/sessions/2025-06-03-greenwashing/"
+from = "/sessions/2025-06-03-greenwashing/index.html"
 to = "/sessions/2025/greenwashing/"
 
 [[redirects]]
-from = "/agenda/"
+from = "/agenda/index.html"
 to = "/sessions/"
 
 [[redirects]]
-from = "/2025/02/"
+from = "/2025/02/index.html"
 to = "/sessions/2025/02/"
 
 [[redirects]]
-from = "/intervenantes/thierry-libaert/programs/"
+from = "/intervenantes/thierry-libaert/programs/index.html"
 to = "/intervenant-es/thierry-libaert/programs/"
 
 [[redirects]]
-from = "/programme/master-class-communication-responsable-niveau-1/"
+from = "/programme/master-class-communication-responsable-niveau-1/index.html"
 to = "/programme/master-class-communication-responsable-session-progresser/"
 
 [[redirects]]
-from = "/intervenantes/thierry-libaert/publications/"
+from = "/intervenantes/thierry-libaert/publications/index.html"
 to = "/intervenant-es/thierry-libaert/publications/"
 
 [[redirects]]
-from = "/programme/master-class-communication-responsable-niveau-2/"
+from = "/programme/master-class-communication-responsable-niveau-2/index.html"
 to = "/programme/master-class-communication-responsable-session-piloter/"
 
 [[redirects]]
-from = "/author/mathieu/"
+from = "/author/mathieu/index.html"
 to = "/"
 
 [[redirects]]
-from = "/2024/05/"
+from = "/2024/05/index.html"
 to = "/sessions/2024/05/"
 
 [[redirects]]
-from = "/equipe/equipe-editoriale/"
+from = "/equipe/equipe-editoriale/index.html"
 to = "/intervenant-es/equipe-editoriale/"
 
 [[redirects]]
-from = "/equipe/mathieu-jahnich/publications/"
+from = "/equipe/mathieu-jahnich/publications/index.html"
 to = "/intervenant-es/mathieu-jahnich/publications/"
 
 [[redirects]]
-from = "/intervenantes/mathieu-jahnich/publications/"
+from = "/intervenantes/mathieu-jahnich/publications/index.html"
 to = "/intervenant-es/mathieu-jahnich/publications/"
 
 [[redirects]]
-from = "/intervenantes/mathieu-jahnich/programs/"
+from = "/intervenantes/mathieu-jahnich/programs/index.html"
 to = "/intervenant-es/mathieu-jahnich/programs/"
 
 [[redirects]]
-from = "/programme/master-class-communication-responsable-session-progresser/master-class-communication-responsable-session-piloter/"
+from = "/programme/master-class-communication-responsable-session-progresser/master-class-communication-responsable-session-piloter/index.html"
 to = "/programme/master-class-communication-responsable-session-piloter/"
 
 [[redirects]]
-from = "/2025/05/"
+from = "/2025/05/index.html"
 to = "/sessions/2025/05/"
 
 [[redirects]]
-from = "/2024/12/"
+from = "/2024/12/index.html"
 to = "/sessions/2024/12/"
 
 [[redirects]]
-from = "/2024/02/"
+from = "/2024/02/index.html"
 to = "/sessions/2024/02/"
 
 [[redirects]]
-from = "/2024/09/"
+from = "/2024/09/index.html"
 to = "/sessions/2024/09/"
 
 [[redirects]]
-from = "/master-class/"
+from = "/master-class/index.html"
 to = "/ecoles/master-class/"
 
 [[redirects]]
-from = "/2025/10/"
+from = "/2025/10/index.html"
 to = "/sessions/2025/10/"
 
 [[redirects]]
-from = "/sessions/2024-06-01-greenwashing-session-pour-les-equipes-communication-et-marketing/"
+from = "/sessions/2024-06-01-greenwashing-session-pour-les-equipes-communication-et-marketing/index.html"
 to = "/sessions/2024-06-11-greenwashing-session-pour-les-equipes-communication-et-marketing/"
 
